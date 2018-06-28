@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"<Unnamed>","l":"Index"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"Publisher"},{"p":"<Unnamed>","l":"SpreadsheetReader"},{"p":"<Unnamed>","l":"WebScraper"}]
