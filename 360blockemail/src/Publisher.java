@@ -7,9 +7,6 @@
 
 public class Publisher {
     private final String category, url, email, submission;
-	
-	//stats
-	
 	public boolean failedConnection;
     public Publisher(String category, String url, String submission) throws Exception{
         this.category = category;

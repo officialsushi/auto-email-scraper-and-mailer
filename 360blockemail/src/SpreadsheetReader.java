@@ -19,8 +19,6 @@ public class SpreadsheetReader{
      * @throws Exception
      */
     public SpreadsheetReader(String directory, int readOption) throws Exception {
-		System.out.println("Current local time: " + LocalTime.now());
-		LocalTime startTime = LocalTime.now();
         this.directory = directory;
 		spreadsheetReader(readOption);
     }
@@ -31,16 +29,16 @@ public class SpreadsheetReader{
 	 */
 	public void spreadsheetReader(int readOption) throws Exception {
 		if(readOption == 0){
-			ArrayList<ArrayList> lists = whiteSpaceSeparatedFileToLists();
+			ArrayList<ArrayList<String>> lists = whiteSpaceSeparatedFileToLists();
 			genCategoryIndices(lists.get(0));
 			userChooseCategories();
-			listsToObjects(lists.get(0), lists.get(1), lists.get(2));
+			listsToObjects(lists);
 		}
 		else if (readOption == 1){
-			ArrayList<ArrayList> lists = commaSeparatedFileToLists();
+			ArrayList<ArrayList<String>> lists = commaSeparatedFileToLists();
 			genCategoryIndices(lists.get(0));
 			userChooseCategories();
-			listsToObjects(lists.get(0), lists.get(1), lists.get(2));
+			listsToObjects(lists);
 		}
 		else
 			throw new IllegalArgumentException("Illegal argument, gotta be 0 for white space separated or 1 for comma separated");
@@ -51,7 +49,6 @@ public class SpreadsheetReader{
 	 */
 	public void userChooseCategories() {
     	Scanner in = new Scanner(System.in);
-    	
     	System.out.println("\n=============================================");
         System.out.println(">> Select categories of interest or -1 for all:");
         for (int i = 0; i < indices.size(); i++){
@@ -95,7 +92,6 @@ public class SpreadsheetReader{
         System.out.println("Category indices generated!");
     }
 
-
     /**
      *  *******======= not tested so idk if it works =====*****
      * @return string in table format
@@ -117,18 +113,16 @@ public class SpreadsheetReader{
 	 *
      * @throws Exception
      */
-    private ArrayList<ArrayList> whiteSpaceSeparatedFileToLists() throws Exception {
+    private ArrayList<ArrayList<String>> whiteSpaceSeparatedFileToLists() throws Exception {
         System.out.print("Converting database file to list... ");
-
         final int numberDatabaseColumns = 3;
-
         String token;
         File file = new File(directory);
         Scanner inFile = new Scanner(file);
-        ArrayList<ArrayList> lists = new ArrayList();
-        lists.add(new ArrayList<String>());
-        lists.add(new ArrayList<String>());
-        lists.add(new ArrayList<String>());
+        ArrayList<ArrayList<String>> lists = new ArrayList();
+        lists.add(new ArrayList<>());
+        lists.add(new ArrayList<>());
+        lists.add(new ArrayList<>());
         int counter = numberDatabaseColumns;
         while (inFile.hasNext()){
             token = inFile.next();
@@ -137,7 +131,6 @@ public class SpreadsheetReader{
         }
         inFile.close();
         System.out.println("Database file converted to lists!");
-        
         return lists;
     }
 	
@@ -149,18 +142,16 @@ public class SpreadsheetReader{
 	 *
 	 * @throws Exception
 	 */
-	private ArrayList<ArrayList> commaSeparatedFileToLists() throws Exception {
+	private ArrayList<ArrayList<String>> commaSeparatedFileToLists() throws Exception {
 		System.out.print("Converting database file to list... ");
-		
 		final int numberDatabaseColumns = 3;
-		
-		String token = "";
+		String token;
 		File file = new File(directory);
 		Scanner inFile = new Scanner(file);
-		ArrayList<ArrayList> lists = new ArrayList();
-		lists.add(new ArrayList<String>());
-		lists.add(new ArrayList<String>());
-		lists.add(new ArrayList<String>());
+		ArrayList<ArrayList<String>> lists = new ArrayList();
+		lists.add(new ArrayList<>());
+		lists.add(new ArrayList<>());
+		lists.add(new ArrayList<>());
 		int counter = numberDatabaseColumns;
 		while (inFile.hasNextLine()){
 			token = inFile.nextLine();
@@ -181,17 +172,15 @@ public class SpreadsheetReader{
 	
 	/**
 	 * Uses indices ArrayList to only parse the right categories
-	 * @param category
-	 * @param url
-	 * @param submission
+	 * @param lists list of lists of the different data value types
 	 * @throws Exception
 	 */
-    private void listsToObjects(ArrayList<String> category, ArrayList<String> url, ArrayList<String> submission) throws Exception {
+    private void listsToObjects(ArrayList<ArrayList<String>> lists) throws Exception {
         System.out.print("Converting lists to objects... ");
         for (int n = 0; n < userCategories.size(); n++){
         	System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
-				publishers.add(new Publisher(category.get(i), url.get(i), submission.get(i)));
+				publishers.add(new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i)));
 			}
 		}
 		System.out.println("Converted lists to objects!");
@@ -203,10 +192,9 @@ public class SpreadsheetReader{
     	for (int i = 0; i < publishers.size() ; i++){
     		if (!(publishers.get(i).getEmail() == null))
     			emailsFound++;
-			if (!(publishers.get(i).isFailedConnection()))
+			if ((publishers.get(i).isFailedConnection()))
 				failedConnections++;
 		}
-  
 		System.out.println("--------------------------------------------------------------------");
 		System.out.println("     \u001b[37mPERFORMANCE ANALYSIS\u001b[0m");
 		System.out.println();

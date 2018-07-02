@@ -5,7 +5,6 @@ public class Main {
 
         LocalTime startTime = LocalTime.now();
 
-
         SpreadsheetReader reader = new SpreadsheetReader("databasecommas.csv", 1);
         printPublishers(reader);
         reader.evaluatePerformance(startTime);
