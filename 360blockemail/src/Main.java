@@ -1,5 +1,9 @@
 import java.time.LocalTime;
 
+/**
+ * July 2: all had ~22% efficiency
+ */
+
 public class Main {
     public static void main(String[] args) throws Exception {
 

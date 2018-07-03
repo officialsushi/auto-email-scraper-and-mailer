@@ -4,6 +4,8 @@
  */
 
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalTime;
 import java.util.*;
 
@@ -186,7 +188,8 @@ public class SpreadsheetReader{
 		System.out.println("Converted lists to objects!");
     }
     
-    public void evaluatePerformance(LocalTime startTime){
+    public void evaluatePerformance(LocalTime startTime) throws IOException {
+    	LocalTime endTime = LocalTime.now();
     	int emailsFound = 0;
     	int failedConnections = 0;
     	for (int i = 0; i < publishers.size() ; i++){
@@ -198,12 +201,26 @@ public class SpreadsheetReader{
 		System.out.println("--------------------------------------------------------------------");
 		System.out.println("     \u001b[37mPERFORMANCE ANALYSIS\u001b[0m");
 		System.out.println();
-		System.out.println("Start time: " + startTime + "\t\t\t  End time: " + LocalTime.now());
+		System.out.println("Start time: " + startTime + "\t\t\t  End time: " + endTime);
 		System.out.println("# of publishers processed: " + publishers.size() + "\t\t  # of emails found: " + emailsFound);
 		System.out.printf("# failed connections: %3d \t\t      Out of: %4d (%4.2f%%)\n", failedConnections, publishers.size(), ((double)failedConnections/publishers.size())*100);
 		System.out.printf("\n%% of total emails found: %4.2f%%\n", (double)emailsFound / publishers.size() * 100);
 		System.out.printf("%% of emails from working connections found: %4.2f%%\n", (double)emailsFound / (publishers.size() - failedConnections) * 100);
 		System.out.println("--------------------------------------------------------------------");
 		
+		
+		String currentDateAndTime = java.time.LocalDate.now().toString() + " " + java.time.LocalTime.now().toString();
+		PrintWriter outFile = new PrintWriter(new File(currentDateAndTime + ".txt"));
+		
+		outFile.println("------------------------------------------------------------------------------");
+		outFile.println("     PERFORMANCE ANALYSIS" + currentDateAndTime);
+		outFile.println();
+		outFile.println("Start time: " + startTime + "\t\t\t  End time: " + endTime);
+		outFile.println("# of publishers processed: " + publishers.size() + "\t\t  # of emails found: " + emailsFound);
+		outFile.printf("# failed connections: %3d \t\t      Out of: %4d (%4.2f%%)\n", failedConnections, publishers.size(), ((double)failedConnections/publishers.size())*100);
+		outFile.printf("\n%% of total emails found: %4.2f%%\n", (double)emailsFound / publishers.size() * 100);
+		outFile.printf("%% of emails from working connections found: %4.2f%%\n", (double)emailsFound / (publishers.size() - failedConnections) * 100);
+		outFile.println("------------------------------------------------------------------------------");
+		outFile.close();
 	}
 }

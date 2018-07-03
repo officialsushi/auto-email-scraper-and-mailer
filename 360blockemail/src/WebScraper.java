@@ -22,7 +22,7 @@ public class WebScraper {
     private Document document;
     private String email;
     private boolean failedConnection;
-	
+	private static String[] commonTLDs = {".com", ".org", ".uk", ".net"};
     
     public WebScraper(String url) throws Exception{
         this.url = url;
@@ -83,7 +83,7 @@ public class WebScraper {
 	 * @return the email, all cleaned up or null
 	 * @throws MalformedURLException
 	 */
-	private String findEmail() {
+	private String findEmail(){
         if (pageText == null){
             return null;
         }
@@ -157,20 +157,18 @@ public class WebScraper {
 			}
 		}
 		//check if its social media or anything with @bullshit
-		if (crawledEmail.indexOf("@") == 0 && ! crawledEmail.contains(urlSuffix) && postToken != null && ! postToken.contains(urlSuffix) && postPostToken != null && ! postPostToken.contains(urlSuffix)) {
+		if (crawledEmail.indexOf("@") == 0 && ! containsValidSuffix(crawledEmail) && postToken != null && ! containsValidSuffix(postToken) && postPostToken != null && ! containsValidSuffix(postPostToken)) {
 			System.out.println(crawledEmail + " is NOT valid!");
 			return false;
 		}
 		//check if they separated urlSuffix from back
-		if (postPostToken != null && postPostToken.equals(urlSuffix)) {
+		if (postPostToken != null && containsValidSuffix(postPostToken))
 			postToken += postPostToken;
-			System.out.println("\n\n\n\nWow actually used the postposttoken thing!\n\n\n\n");
-		}
 		//check if the thing only picked up the @ sign since they did front @ back.com
 		if (preToken != null && postToken != null && crawledEmail.length() == 1)
 			crawledEmail = preToken + crawledEmail + postToken;
 		//checking to if its @foo.com
-		if (preToken != null && crawledEmail.indexOf("@") == 0 && crawledEmail.contains(urlSuffix))
+		if (preToken != null && crawledEmail.indexOf("@") == 0 && containsValidSuffix(postToken))
 			crawledEmail = preToken + crawledEmail;
 		//checking to see if its foo@
 		if (postToken != null && crawledEmail.indexOf("@") == crawledEmail.length()-1)
@@ -189,20 +187,43 @@ public class WebScraper {
 			return false;
 		}
 		email = crawledEmail;
-		// does the back have the suffix?
-		if (crawledEmail.contains("@") && back.contains(urlSuffix)) {
+		// does the back contain a valid suffix?
+		if (crawledEmail.contains("@") && containsValidSuffix(back)) {
 			System.out.println(crawledEmail + " is valid!");
 			return true;
 		}
 		System.out.println(crawledEmail + " is NOT valid!");
 		return false;
 	}
+	private boolean containsValidSuffix(String token){
+		if(token == null)
+			return false;
+		if(token.contains(urlSuffix))
+			return true;
+		for (String end : commonTLDs){
+			if(token.contains(end))
+				return true;
+		}
+		return false;
+	}
+	
+	private String getCorrectTLD(String crawledEmail){
+		if (crawledEmail.contains(urlSuffix))
+			return urlSuffix;
+		for (String end : commonTLDs){
+			if (crawledEmail.contains(end))
+				return end;
+		}
+		return null;
+	}
+	
 	/**
 	 * if the email is found in plain text, this cleans it
 	 * @param crawledEmail
 	 * @return cleaned email
 	 */
 	private String plainTextEmailCleaner (String crawledEmail) {
+		String correctSuffix = getCorrectTLD(crawledEmail);
 		String front = crawledEmail.substring(0, crawledEmail.indexOf("@"));
 		String back = crawledEmail.substring(crawledEmail.indexOf("@")+1, crawledEmail.length());
 		//checking and cleaning if [foo]@bar.com
@@ -213,8 +234,8 @@ public class WebScraper {
 		if (front.contains(":"))
 			front = front.substring(front.indexOf(":") + 1);
 		//checking and cleaning if foo@bar.com doesn't end in .com so should take care of everything else
-				if (! (back.endsWith(urlSuffix))) {
-					back = back.substring(0, back.lastIndexOf(urlSuffix) + urlSuffix.length());
+				if (! (back.endsWith(correctSuffix))) {
+					back = back.substring(0, back.lastIndexOf(correctSuffix) + correctSuffix.length());
 				}
 		return front + "@" + back;
 	}
@@ -234,7 +255,7 @@ public class WebScraper {
 				}
 				String front = scrapedEmail.substring(0, scrapedEmail.indexOf("@"));
 				String back = scrapedEmail.substring(scrapedEmail.indexOf("@")+1);
-				if (back.contains(urlSuffix)) {
+				if (containsValidSuffix(back)) {
 					System.out.println("Success!");
 					scrapedEmail = front + "@" + back;
 					System.out.println(scrapedEmail);
@@ -258,32 +279,32 @@ public class WebScraper {
 	 * @param crawledEmail confirmed potential email that is not clean
 	 * @return cleaned email
 	 */
-	private String hrefEmailCleaner (String crawledEmail){
+	private String hrefEmailCleaner (String crawledEmail) throws Exception{
+		String correctSuffix = getCorrectTLD(crawledEmail);
 		//split foo@bar.com into foo / bar.com
 		String front = crawledEmail.substring(0, crawledEmail.indexOf("@"));
 		String back = crawledEmail.substring(crawledEmail.indexOf("@")+1, crawledEmail.length());
 		//checking for foo@bar.com/subject? afsfasf or whatever wonky shit comes after the actual address
-		if (! (back.indexOf(urlSuffix) == back.length() - urlSuffix.length()))
-			back = back.substring(0, back.indexOf(urlSuffix) + urlSuffix.length());
+		if (! (back.indexOf(correctSuffix) == back.length() - correctSuffix.length()))
+			back = back.substring(0, back.indexOf(correctSuffix) + correctSuffix.length());
 		//checking for mailto: or other prefixes
 		if (front.contains(":"))
 			front = front.substring(front.indexOf(":") + 1);
 		return front + "@" + back;
 	}
-	
 	private String parseSuffix(){
 		try {
 			URL url = new URL(this.url);
 			String[] domainNameParts = url.getHost().split("\\.");
 			String tldString = domainNameParts[domainNameParts.length - 1];
-			return tldString;
+			return "."+tldString;
 		}
 		catch(MalformedURLException e){
-			return "uk";
+			return ".uk";
 		}
 		catch(Exception e){
 			System.out.println(e);
-			return "uk";
+			return ".uk";
 		}
 	}
 	public boolean isFailedConnection() {
