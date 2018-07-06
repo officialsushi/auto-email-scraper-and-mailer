@@ -9,11 +9,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.openqa.selenium.By;
 import java.io.File;
+import java.util.List;
 
 /**
  * Scraper using Selenium to scrape off javascript sites
@@ -30,21 +29,21 @@ public class JavaScriptScraper extends TestCase {
 	}
 	
 	@BeforeClass
-	public static void createAndStartService() throws Exception{
+	private static void createAndStartService() throws Exception{
 		service = new ChromeDriverService.Builder()
-				.usingDriverExecutable(new File("/Applications/WebDrivers/chromedriver.exe/"))
+				.usingDriverExecutable(new File("/Applications/WebDrivers/chromedriver/"))
 				.usingAnyFreePort()
 				.build();
 		service.start();
 	}
 	
 	@AfterClass
-	public static void StopService() {
+	private static void StopService() {
 		service.stop();
 	}
 	
 	@Before
-	public void createDriver() {
+	private void createDriver() {
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
 		chromeOptions.addArguments("start-maximized");
@@ -55,16 +54,27 @@ public class JavaScriptScraper extends TestCase {
 		driver = new ChromeDriver(chromeOptions);
 	}
 	@After
-	public void quitDriver() {
+	private void quitDriver() {
 		driver.quit();
 	}
 	
 	@Test
-	public void testGoogleSearch() {
+	private void testGoogleSearch() {
 		driver.get("http://www.google.com");
 	}
-	private void scrape(String url){
+	public void scrape(String url){
 		driver.get(url);
+		String content = driver.getPageSource();
+		List<WebElement> mainVersions = content.findElements(By.tagName("p"));
+		System.out.println(content);
 	}
 	
+	public static void main(String args[]) throws Exception{
+		System.out.println("asf");
+		JavaScriptScraper scraper = new JavaScriptScraper();
+		scraper.scrape("http://www.dealermarketing.com/write-for-us/");
+		scraper.scrape("http://www.hypergridbusiness.com/about/write-for-us/");
+		scraper.quitDriver();
+	}
 }
+

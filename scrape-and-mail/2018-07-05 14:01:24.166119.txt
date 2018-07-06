@@ -1,0 +1,10 @@
+------------------------------------------------------------------------------
+     PERFORMANCE ANALYSIS2018-07-05 14:01:24.166119
+
+Start time: 12:37:40.002942			  End time: 14:01:24.162388
+# of publishers processed: 2151		  # of emails found: 483
+# failed connections: 587 		      Out of: 2151 (27.29%)
+
+% of total emails found: 22.45%
+% of emails from working connections found: 30.88%
+------------------------------------------------------------------------------

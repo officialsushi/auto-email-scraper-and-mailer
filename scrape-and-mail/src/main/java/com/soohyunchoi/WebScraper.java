@@ -57,7 +57,7 @@ public class WebScraper {
         System.out.print("Attempting to scrape " + url + " ... ");
         try {
         	document = Jsoup.connect(url).timeout(8000).get();
-            String paragraph = document.select("p").text();
+            String paragraph = document.select("p,div").text();
             String[] split = paragraph.split("\\s+");
 			System.out.println("Success!");
 			failedConnection = false;
@@ -147,6 +147,13 @@ public class WebScraper {
 				crawledEmail = crawledEmail.replace(badAtSignage[i], "@");
 			}
 		}
+		//check for foo@bar[dot]com
+		String[] badDotSignage = {"[dot]", "(dot)"};
+		for (int i = 0; i < badDotSignage.length; i++){
+			if (crawledEmail.contains(badDotSignage[i])) {
+				crawledEmail = crawledEmail.replace(badDotSignage[i], ".");
+			}
+		}
 		if (!isValid) {
 			return false;
 		}
@@ -169,26 +176,23 @@ public class WebScraper {
 			return false;
 		}
 		//check if they separated urlSuffix from back
-		if (postPostToken != null && containsValidSuffix(postPostToken))
+		if (postPostToken != null && containsValidSuffix(postPostToken)) {
 			postToken += postPostToken;
+		}
 		//check if the thing only picked up the @ sign since they did front @ back.com
-		if (preToken != null && postToken != null && crawledEmail.length() == 1)
+		if (preToken != null && postToken != null && crawledEmail.length() == 1) {
 			crawledEmail = preToken + crawledEmail + postToken;
+		}
 		//checking to if its @foo.com
-		if (preToken != null && crawledEmail.indexOf("@") == 0 && containsValidSuffix(postToken))
+		if (preToken != null && crawledEmail.indexOf("@") == 0 && containsValidSuffix(postToken)) {
 			crawledEmail = preToken + crawledEmail;
+		}
 		//checking to see if its foo@
-		if (postToken != null && crawledEmail.indexOf("@") == crawledEmail.length()-1)
+		if (postToken != null && crawledEmail.indexOf("@") == crawledEmail.length()-1) {
 			crawledEmail = crawledEmail + postToken;
+		}
 		int length = crawledEmail.length();
 		String back = crawledEmail.substring(crawledEmail.indexOf("@")+1, length);
-		//check for foo@bar[dot]com
-		String[] badDotSignage = {"[dot]", "(dot)"};
-		for (int i = 0; i < badDotSignage.length; i++){
-			if (back.contains(badDotSignage[i])) {
-				back = back.replace(badDotSignage[i], "@");
-			}
-		}
 		if (crawledEmail == null) {
 			System.out.println(crawledEmail + " is NOT valid!");
 			return false;
@@ -213,7 +217,6 @@ public class WebScraper {
 		}
 		return false;
 	}
-	
 	private String getCorrectTLD(String crawledEmail){
 		if (crawledEmail.contains(urlSuffix))
 			return urlSuffix;
@@ -223,7 +226,6 @@ public class WebScraper {
 		}
 		return null;
 	}
-	
 	/**
 	 * if the email is found in plain text, this cleans it
 	 * @param crawledEmail
@@ -241,35 +243,33 @@ public class WebScraper {
 		if (front.contains(":"))
 			front = front.substring(front.indexOf(":") + 1);
 		//checking and cleaning if foo@bar.com doesn't end in .com so should take care of everything else
-				if (! (back.endsWith(correctSuffix))) {
-					back = back.substring(0, back.lastIndexOf(correctSuffix) + correctSuffix.length());
-				}
+		if (! (back.endsWith(correctSuffix)))
+			back = back.substring(0, back.lastIndexOf(correctSuffix) + correctSuffix.length());
+		//check if it starts with illegal characters
+		while(front.substring(0,2).matches("\\D\\W")) {
+			front = front.substring(1);
+		}
 		return front + "@" + back;
 	}
-	
 	/**
 	 * @return href data if it has email inside
 	 * @throws Exception
 	 */
 	private String findEmailFromHref() throws Exception {
-		Elements links = document.select("p>a[href]");
+		Elements links = document.select("p>a[href~=.*@.*]");
 		for (int i = links.size()-1; i >= 0; i--) {
 			String scrapedEmail = links.get(i).attr("href");
-			if( scrapedEmail.contains("@") ){
-				if(scrapedEmail.indexOf("@") == 0){
-					notFoundInHref();
-					return null;
-				}
-				String front = scrapedEmail.substring(0, scrapedEmail.indexOf("@"));
-				String back = scrapedEmail.substring(scrapedEmail.indexOf("@")+1);
-				if (containsValidSuffix(back)) {
-					System.out.println("Success!");
-					scrapedEmail = front + "@" + back;
-					System.out.println(scrapedEmail);
-					System.out.println("Found email, cleaning " + scrapedEmail + "...\nMONEY!!: \u001b[32m" + hrefEmailCleaner(scrapedEmail) + "\u001b[0m\n");
-					return hrefEmailCleaner(front + "@" + back);
-				}
-			
+			if(scrapedEmail.indexOf("@") == 0){
+				notFoundInHref();
+				return null;
+			}
+			String front = scrapedEmail.split("@")[0];
+			String back = scrapedEmail.split("@")[1];
+			if (containsValidSuffix(back)) {
+				System.out.println("Success!");
+				scrapedEmail = front + "@" + back;
+				System.out.println("Found email, cleaning " + scrapedEmail + "...\nMONEY!!: \u001b[32m" + hrefEmailCleaner(scrapedEmail) + "\u001b[0m\n");
+				return hrefEmailCleaner(front + "@" + back);
 			}
 		}
 		notFoundInHref();
