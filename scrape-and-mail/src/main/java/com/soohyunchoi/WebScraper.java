@@ -1,15 +1,16 @@
 package com.soohyunchoi;
 
+import org.apache.commons.lang3.time.StopWatch;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.openqa.selenium.TimeoutException;
 
 import java.net.MalformedURLException;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.net.URL;
-import java.util.ArrayList;
 
 /**
  * @author sushi choi
@@ -20,15 +21,18 @@ import java.util.ArrayList;
 public class WebScraper {
 
     private final String url, urlSuffix;
-    private final String[] pageText;
+    private final String[] pageTextJSoup;
+    private String[] pageTextSelenium;
+    private JavaScriptScraper jsScraper;
     private Document document;
     private String email;
     private boolean failedConnection;
 	private static String[] commonTLDs = {".com", ".org", ".uk", ".net"};
     
-    public WebScraper(String url) throws Exception{
+    public WebScraper(String url, JavaScriptScraper jsScraper) throws Exception{
+    	this.jsScraper = jsScraper;
         this.url = url;
-        this.pageText = scrape();
+        this.pageTextJSoup = scrape();
 		this.urlSuffix = parseSuffix();
 		this.email = findEmail();
     }
@@ -42,7 +46,7 @@ public class WebScraper {
 		boolean internetWorks = false;
 		while(!internetWorks) {
 			try {
-				Jsoup.connect("https://www.google.com/").timeout(3000);
+				Jsoup.connect("https://www.google.com/").timeout(300);
 				internetWorks = true;
 			} catch (Exception e){
 				System.out.print("\u001b[31mInternet down, retrying in 3...");
@@ -53,7 +57,6 @@ public class WebScraper {
 				Thread.sleep(2000);
 			}
 		}
-		
         System.out.print("Attempting to scrape " + url + " ... ");
         try {
         	document = Jsoup.connect(url).timeout(8000).get();
@@ -80,12 +83,77 @@ public class WebScraper {
 			return null;
 		}
     }
+	
+	/**
+	 * prioritizes scraping in the set order
+	 * 1. plaintext using jsoup
+	 * 2. href using jsoup
+	 * 3. plaintext using selenium (SLOW)
+	 * 4. href using selenium (SLOW)
+	 * @return email or null if no email is found
+	 */
+	private String findEmail() {
+		//immediately return null if connection fails
+		if (failedConnection)
+			return null;
+		
+		String foundEmail = findEmailFromText(pageTextJSoup);
+		if (foundEmail != null) {
+			return foundEmail;
+		}
+		
+		System.out.print("Email not found in plaintext, attempting to find in href... ");
+		try {
+			foundEmail = findEmailFromHref();
+		} catch (Exception e){
+			System.out.println(e);
+		}
+		if (foundEmail != null) {
+			return foundEmail;
+		}
+		
+		System.out.println("\nEmail not found in href, attempting to find in js... ");
+		try {
+			StopWatch stopwatch = new StopWatch();
+			stopwatch.start();
+			jsScraper.connect(url);
+			stopwatch.stop();
+			System.out.println("Loaded in " + stopwatch + " seconds!");
+			try {
+				foundEmail = findEmailFromText(jsScraper.scrape());
+			} catch (Exception e){
+				System.out.println(e);
+			}
+			if (foundEmail != null) {
+				return foundEmail;
+			}
+			
+			System.out.print("Email not found in js, attempting to find in jshref... ");
+			try {
+				foundEmail = findEmailFromJavaScriptHref(jsScraper.scrapeHref());
+			} catch (Exception e){
+				System.out.println(e);
+			}
+			if (foundEmail != null) {
+				return foundEmail;
+			}
+			
+		}
+		catch (TimeoutException e){
+			System.out.print("\nTimed out!");
+		}
+		
+		System.out.println();
+		System.out.println("\u001b[37mNo email on page!\u001b[0m\n");
+		return null;
+	}
+ 
 	/**
 	 *  find email from string[] of tokens scraped from webpage
 	 * @return the email, all cleaned up or null
 	 * @throws MalformedURLException
 	 */
-	private String findEmail(){
+	private String findEmailFromText(String[] pageText){
         if (pageText == null){
             return null;
         }
@@ -114,14 +182,8 @@ public class WebScraper {
 				System.out.println(">> MONEY!!: " + "\u001b[32m" + plainTextEmailCleaner(email) + "\u001b[0m\n");
 				return plainTextEmailCleaner(email);
 			}
-			
 		}
-        System.out.print("Email not found in plaintext, attempting to find in href... ");
-        try {
-			return findEmailFromHref();
-		} catch (Exception e){
-        	System.out.println(e);
-		}
+        
         return null;
     }
 	
@@ -255,30 +317,53 @@ public class WebScraper {
 	 * @return href data if it has email inside
 	 * @throws Exception
 	 */
+	@SuppressWarnings("Duplicates")
 	private String findEmailFromHref() throws Exception {
-		Elements links = document.select("p>a[href~=.*@.*]");
+		Elements links = document.select("a[href~=.*@.*]");
 		for (int i = links.size()-1; i >= 0; i--) {
 			String scrapedEmail = links.get(i).attr("href");
-			if(scrapedEmail.indexOf("@") == 0){
-				notFoundInHref();
-				return null;
-			}
-			String front = scrapedEmail.split("@")[0];
-			String back = scrapedEmail.split("@")[1];
-			if (containsValidSuffix(back)) {
-				System.out.println("Success!");
-				scrapedEmail = front + "@" + back;
-				System.out.println("Found email, cleaning " + scrapedEmail + "...\nMONEY!!: \u001b[32m" + hrefEmailCleaner(scrapedEmail) + "\u001b[0m\n");
-				return hrefEmailCleaner(front + "@" + back);
+			if(!(scrapedEmail.indexOf("@") == 0)){
+				String front = scrapedEmail.split("@")[0];
+				String back = scrapedEmail.split("@")[1];
+				if (containsValidSuffix(back)) {
+					System.out.println("Success!");
+					scrapedEmail = front + "@" + back;
+					System.out.println("Found email, cleaning "
+							+ scrapedEmail
+							+ "...\nMONEY!!: \u001b[32m"
+							+ hrefEmailCleaner(scrapedEmail)
+							+ "\u001b[0m\n");
+					return hrefEmailCleaner(front + "@" + back);
+				}
 			}
 		}
-		notFoundInHref();
 		return null;
 	}
 	
-	private static void notFoundInHref(){
-		System.out.println("Not found in href!");
-		System.out.println("\u001b[37mNo email on page!\u001b[0m\n");
+	/**
+	 * @return parse js href data if it has email inside (SLOW)
+	 * @throws Exception
+	 */
+	@SuppressWarnings("Duplicates")
+	private String findEmailFromJavaScriptHref(String[] hrefTokens) throws Exception {
+		for (int i = hrefTokens.length-1; i >= 0; i--) {
+			String scrapedEmail = hrefTokens[i];
+			if(scrapedEmail != null && scrapedEmail.indexOf("@") > 0){
+				String front = scrapedEmail.split("@")[0];
+				String back = scrapedEmail.split("@")[1];
+				if (containsValidSuffix(back)) {
+					System.out.println("Success!");
+					scrapedEmail = front + "@" + back;
+					System.out.println("Found email, cleaning "
+							+ scrapedEmail
+							+ "...\nMONEY!!: \u001b[32m"
+							+ hrefEmailCleaner(scrapedEmail)
+							+ "\u001b[0m\n");
+					return hrefEmailCleaner(front + "@" + back);
+				}
+			}
+		}
+		return null;
 	}
 	
 	/**

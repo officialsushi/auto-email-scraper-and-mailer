@@ -63,9 +63,11 @@ public class SpreadsheetReader{
 				for (Index a : indices){
 					userCategories.add(a);
 				}
+				in.close();
 				return;
 			}
 			if (input == 0){
+				in.close();
 				return;
 			}
 			userCategories.add(indices.get(input-1));
@@ -92,19 +94,6 @@ public class SpreadsheetReader{
             i++;
         }
         System.out.println("Category indices generated!");
-    }
-
-    /**
-     *  *******======= not tested so idk if it works =====*****
-     * @return string in table format
-     */
-    @Override
-    public String toString() {
-        String string = "";
-        for (int i = 0; i < publishers.size(); i++) {
-            string += String.format("%-30s%-50s%20s%n", publishers.get(i).getCategory(), publishers.get(i).getUrl(), publishers.get(i).getSubmission());
-        }
-        return string;
     }
 
     /**
@@ -179,16 +168,25 @@ public class SpreadsheetReader{
 	 */
     private void listsToObjects(ArrayList<ArrayList<String>> lists) throws Exception {
         System.out.print("Converting lists to objects... ");
+		JavaScriptScraper scraper = new JavaScriptScraper();
         for (int n = 0; n < userCategories.size(); n++){
         	System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
-				publishers.add(new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i)));
+				publishers.add(new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i), scraper));
 			}
 		}
+		scraper.quitDriver();
+		scraper.stopService();
+	
 		System.out.println("Converted lists to objects!");
     }
-    
-    public void evaluatePerformance(LocalTime startTime) throws IOException {
+	
+	/**
+	 * Prints and creates file of performance stats, for logging purposes
+	 * @param startTime
+	 * @throws IOException
+	 */
+	public void evaluatePerformance(LocalTime startTime) {
     	LocalTime endTime = LocalTime.now();
     	int emailsFound = 0;
     	int failedConnections = 0;
@@ -210,17 +208,32 @@ public class SpreadsheetReader{
 		
 		
 		String currentDateAndTime = java.time.LocalDate.now().toString() + " " + LocalTime.now().toString();
-		PrintWriter outFile = new PrintWriter(new File(currentDateAndTime + ".txt"));
-		
-		outFile.println("------------------------------------------------------------------------------");
-		outFile.println("     PERFORMANCE ANALYSIS" + currentDateAndTime);
-		outFile.println();
-		outFile.println("Start time: " + startTime + "\t\t\t  End time: " + endTime);
-		outFile.println("# of publishers processed: " + publishers.size() + "\t\t  # of emails found: " + emailsFound);
-		outFile.printf("# failed connections: %3d \t\t      Out of: %4d (%4.2f%%)\n", failedConnections, publishers.size(), ((double)failedConnections/publishers.size())*100);
-		outFile.printf("\n%% of total emails found: %4.2f%%\n", (double)emailsFound / publishers.size() * 100);
-		outFile.printf("%% of emails from working connections found: %4.2f%%\n", (double)emailsFound / (publishers.size() - failedConnections) * 100);
-		outFile.println("------------------------------------------------------------------------------");
-		outFile.close();
+		try {
+			PrintWriter outFile = new PrintWriter(new File(currentDateAndTime + ".txt"));
+			
+			outFile.println("------------------------------------------------------------------------------");
+			outFile.println("     PERFORMANCE ANALYSIS" + currentDateAndTime);
+			outFile.println();
+			outFile.println("Start time: " + startTime + "\t\t\t  End time: " + endTime);
+			outFile.println("# of publishers processed: " + publishers.size() + "\t\t  # of emails found: " + emailsFound);
+			outFile.printf("# failed connections: %3d \t\t      Out of: %4d (%4.2f%%)\n", failedConnections, publishers.size(), ((double)failedConnections/publishers.size())*100);
+			outFile.printf("\n%% of total emails found: %4.2f%%\n", (double)emailsFound / publishers.size() * 100);
+			outFile.printf("%% of emails from working connections found: %4.2f%%\n", (double)emailsFound / (publishers.size() - failedConnections) * 100);
+			outFile.println("------------------------------------------------------------------------------");
+			outFile.close();
+		} catch(Exception e) { }
+	}
+	
+	/**
+	 *  *******======= not tested so idk if it works =====*****
+	 * @return string in table format
+	 */
+	@Override
+	public String toString() {
+		String string = "";
+		for (int i = 0; i < publishers.size(); i++) {
+			string += String.format("%-30s%-50s%20s%n", publishers.get(i).getCategory(), publishers.get(i).getUrl(), publishers.get(i).getSubmission());
+		}
+		return string;
 	}
 }

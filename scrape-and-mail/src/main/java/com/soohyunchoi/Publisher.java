@@ -10,16 +10,17 @@ package com.soohyunchoi;
 public class Publisher {
     private final String category, url, email, submission;
 	public boolean failedConnection;
-    public Publisher(String category, String url, String submission) throws Exception{
-        this.category = category;
-        this.url = url;
-        this.submission = submission;
-        this.email = scrapeForEmail();
+	public JavaScriptScraper jsScraper;
+    public Publisher(String category, String url, String submission, JavaScriptScraper jsScraper) throws Exception{
+		this.category = category;
+		this.url = url;
+		this.submission = submission;
+		this.jsScraper = jsScraper;
+		this.email = scrapeForEmail();
     }
-	
     private String scrapeForEmail() throws Exception{
         if (submission != null) {
-            WebScraper webScraper = new WebScraper(submission);
+            WebScraper webScraper = new WebScraper(submission, jsScraper);
             String emailFromScraper = webScraper.getEmail();
             this.failedConnection = webScraper.isFailedConnection();
             return emailFromScraper;
