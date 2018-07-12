@@ -43,53 +43,6 @@ public class WebScraper {
     }
 	
 	/**
-	 * Connect and scrape entire HTML page
-	 * @return string[] of each word from scrape
-	 * @throws Exception
-	 */
-	private String[] scrape() throws Exception {
-		boolean internetWorks = false;
-		while(!internetWorks) {
-			try {
-				Jsoup.connect("https://www.google.com/").timeout(300);
-				internetWorks = true;
-			} catch (Exception e){
-				System.out.print("\u001b[31mInternet down, retrying in 3...");
-				Thread.sleep(2000);
-				System.out.print(" 2...");
-				Thread.sleep(2000);
-				System.out.print(" 1...\u001b[0m");
-				Thread.sleep(2000);
-			}
-		}
-        System.out.print("Attempting to scrape " + url + " ... ");
-        try {
-        	document = Jsoup.connect(url).timeout(8000).get();
-            String paragraph = document.select("p,div").text();
-            String[] split = paragraph.split("\\s+");
-			System.out.println("Success!");
-			failedConnection = false;
-			return split;
-		} catch (SocketTimeoutException e){
-			System.out.println("\n\u001b[31mDead link!\u001b[0m\n");
-			failedConnection = true;
-			return null;
-		} catch (SocketException e){
-			System.out.println("\n\u001b[31mDead link!\u001b[0m\n");
-			failedConnection = true;
-			return null;
-		} catch (HttpStatusException e){
-			System.out.println("\n\u001b[31mDead link!\u001b[0m\n");
-			failedConnection = true;
-			return null;
-		} catch (Exception a){
-			System.out.println(a + "\n");
-			failedConnection = true;
-			return null;
-		}
-    }
-	
-	/**
 	 * prioritizes scraping in the set order
 	 * 1. plaintext using jsoup
 	 * 2. href using jsoup
@@ -131,6 +84,7 @@ public class WebScraper {
 				System.out.println(e);
 			}
 			if (foundEmail != null) {
+				scraper.quitDriver();
 				return foundEmail;
 			}
 			
@@ -141,11 +95,11 @@ public class WebScraper {
 				System.out.println(e);
 			}
 			if (foundEmail != null) {
+				scraper.quitDriver();
 				return foundEmail;
 			}
 			
 			scraper.quitDriver();
-			scraper.stopService();
 		}
 		catch (TimeoutException e){
 			System.out.print("\nTimed out!");
@@ -158,7 +112,54 @@ public class WebScraper {
 		System.out.println("\u001b[37mNo email on page!\u001b[0m\n");
 		return null;
 	}
- 
+	
+	/**
+	 * Connect and scrape entire HTML page
+	 * @return string[] of each word from scrape
+	 * @throws Exception
+	 */
+	private String[] scrape() throws Exception {
+		boolean internetWorks = false;
+		while(!internetWorks) {
+			try {
+				Jsoup.connect("https://www.google.com/").timeout(300);
+				internetWorks = true;
+			} catch (Exception e){
+				System.out.print("\u001b[31mInternet down, retrying in 3...");
+				Thread.sleep(2000);
+				System.out.print(" 2...");
+				Thread.sleep(2000);
+				System.out.print(" 1...\u001b[0m");
+				Thread.sleep(2000);
+			}
+		}
+		System.out.print("Attempting to scrape " + url + " ... ");
+		try {
+			document = Jsoup.connect(url).timeout(8000).get();
+			String paragraph = document.select("p,div").text();
+			String[] split = paragraph.split("\\s+");
+			System.out.println("Success!");
+			failedConnection = false;
+			return split;
+		} catch (SocketTimeoutException e){
+			System.out.println("\n\u001b[31mDead link!\u001b[0m\n");
+			failedConnection = true;
+			return null;
+		} catch (SocketException e){
+			System.out.println("\n\u001b[31mDead link!\u001b[0m\n");
+			failedConnection = true;
+			return null;
+		} catch (HttpStatusException e){
+			System.out.println("\n\u001b[31mDead link!\u001b[0m\n");
+			failedConnection = true;
+			return null;
+		} catch (Exception a){
+			System.out.println(a + "\n");
+			failedConnection = true;
+			return null;
+		}
+	}
+	
 	/**
 	 *  find email from string[] of tokens scraped from webpage
 	 * @return the email, all cleaned up or null
@@ -239,10 +240,10 @@ public class WebScraper {
 		}
 		
 		String[] badAtSignage = {"[at]", "[@]", "(at)", "(@)"};
-		for (int i = 0; i < badAtSignage.length; i++){
-			if (crawledEmail.contains(badAtSignage[i])) {
+		for (String atSign : badAtSignage){
+			if (crawledEmail.contains(atSign)) {
 				isValid = true;
-				crawledEmail = crawledEmail.replace(badAtSignage[i], "@");
+				crawledEmail = crawledEmail.replace(atSign, "@");
 			}
 		}
 		//check for foo@bar[dot]com
@@ -359,7 +360,7 @@ public class WebScraper {
 			String finalEmail = front+"@"+back;
 			
 			//delete illegal characters
-			String[] illegalCharacters = {"/", "\\", ")", "(", "{", "}", "[", "]", "<", ">"};
+			String[] illegalCharacters = {"/", "\\", ")", "(", "{", "}", "[", "]", "<", ">", "\"", "'"};
 			for (String illegalChar : illegalCharacters){
 				while (finalEmail.contains(illegalChar)) {
 					finalEmail = finalEmail.replace(illegalChar, "");

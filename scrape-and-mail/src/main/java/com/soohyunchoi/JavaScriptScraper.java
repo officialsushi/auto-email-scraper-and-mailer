@@ -20,16 +20,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  */
 
 public class JavaScriptScraper extends TestCase {
-	private static ChromeDriverService service;
+	public static ChromeDriverService service;
 	private WebDriver driver;
 	
 	public JavaScriptScraper() throws java.io.IOException {
-		createAndStartService();
 		createDriver();
 	}
 	
 	@BeforeClass
-	private static void createAndStartService() throws java.io.IOException {
+	public static void createAndStartService() throws java.io.IOException {
 		service = new ChromeDriverService.Builder()
 				.usingDriverExecutable(new File("/Applications/WebDrivers/chromedriver/"))
 				.usingAnyFreePort()
