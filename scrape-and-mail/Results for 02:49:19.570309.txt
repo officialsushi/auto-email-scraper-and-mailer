@@ -1,0 +1,7 @@
+SelfDevelopment,http://www.dumblittleman.com/submit,null,dumblittleman.com
+SelfDevelopment,http://www.lifehack.org/contribute,null,lifehack.org
+SelfDevelopment,http://www.brazen.com/sample-page/write-for-brazen/,null,brazen.comblog
+SelfDevelopment,http://www.selfgrowth.com/submit_articles,null,selfgrowth.com
+SelfDevelopment,http://www.pickthebrain.com/blog/write/,erin@pickthebrain.com,pickthebrain.comblog
+SelfDevelopment,https://www.psychologytoday.com/writers-guidelines,null,psychologytoday.com
+SelfDevelopment,http://www.thechangeblog.com/contribute/,null,thechangeblog.com

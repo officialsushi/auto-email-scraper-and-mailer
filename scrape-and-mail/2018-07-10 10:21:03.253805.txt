@@ -1,0 +1,10 @@
+------------------------------------------------------------------------------
+     PERFORMANCE ANALYSIS2018-07-10 10:21:03.253805
+
+Start time: 10:20:59.459176			  End time: 10:21:03.252466
+# of publishers processed: 1		  # of emails found: 1
+# failed connections:   0 		      Out of:    1 (0.00%)
+
+% of total emails found: 100.00%
+% of emails from working connections found: 100.00%
+------------------------------------------------------------------------------

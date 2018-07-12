@@ -1,0 +1,3 @@
+Sports,http://www.thesportsbank.net/advertise-with-us/,null,thesportsbank.net
+Sports,http://www.offthepost.info/write-for-us/,null,offthepost.info
+Sports,http://www.sportsnetworker.com/write-for-us/submit-guest-post/,null,sportsnetworker.com
