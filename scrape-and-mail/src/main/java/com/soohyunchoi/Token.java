@@ -1,16 +1,19 @@
 package com.soohyunchoi;
 
+
 public class Token {
-	private String preToken, token, postToken, postPostToken;
-	public Token(String preToken, String token, String postToken, String postPostToken){
+	private String prePreToken, preToken, token, postToken, postPostToken;
+	
+	//this constructor never used
+	public Token (String prePreToken, String preToken, String token, String postToken, String postPostToken){
+		this.prePreToken = prePreToken;
 		this.preToken = preToken;
 		this.token = token;
 		this.postToken = postToken;
 		this.postPostToken = postPostToken;
 	}
-	public Token(){
-	
-	}
+	public Token(){ }
+	public String getPrePreToken () { return prePreToken; }
 	public String getPreToken (){
 		return preToken;
 	}
@@ -23,6 +26,7 @@ public class Token {
 	public String getPostPostToken (){
 		return postPostToken;
 	}
+	public void setPrePreToken(String prePreToken) { this.prePreToken = prePreToken; }
 	public void setPreToken(String preToken){
 		this.preToken = preToken;
 	}

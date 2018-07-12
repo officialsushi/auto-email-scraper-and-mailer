@@ -1,0 +1,17 @@
+Lifestyle,http://www.blogher.com/what-are-your-community-guidelines,communitysupport@sheknows.com,blogher.com
+Lifestyle,http://www.mamamia.com.au/contributor-guidelines/,null,mamamia.com.au
+Lifestyle,http://www.thebigissue.org.au/contribute/,editorial@bigissue.org.au,thebigissue.org.au
+Lifestyle,http://blog.savorthesuccess.com/write-for-savor/,null,savorthesuccess.com
+Lifestyle,http://upscalemagazine.com/upscale-contributor-guidelines/,social@upscalemagazine.com,upscalemagazine.com
+Lifestyle,http://fearlessmen.com/mens-lifestyle-blog-guest-posting/,null,fearlessmen.com
+Lifestyle,http://www.findsubscriptionboxes.com/contributor-guidelines/,null,findsubscriptionboxes.com
+Lifestyle,http://coveyrisemagazine.com/contributor-guidelines/,submissions@coveyrisemagazine.com,coveyrisemagazine.com
+Lifestyle,https://www.fiverr.com/nielgrey,null,rightpromdress.com
+Lifestyle,http://californiamomblogs.com/contributor-guidelines/,californiamomblogs@gmail.com,californiamomblogs.com
+Lifestyle,https://www.fiverr.com/nielgrey,null,daycostumes.com
+Lifestyle,https://www.trendingus.com/send-a-guest-post/,info@trendingus.com,trendingus.com
+Lifestyle,http://www.scoopify.org/write-for-us/,scoopify.owl@gmail.com,scoopify.org
+Lifestyle,https://www.fiverr.com/preetirawat,null,lifestylebody.com
+Lifestyle,https://www.fiverr.com/edwardjohnson83,null,tuunte-fashion.com
+Lifestyle,https://www.fiverr.com/janedavies,null,womenlikethat.co.uk
+Lifestyle,https://www.fiverr.com/nielgrey,null,webtrendblog.com

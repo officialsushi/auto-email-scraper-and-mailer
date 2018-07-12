@@ -29,39 +29,21 @@ public class Publisher {
             throw new IllegalArgumentException("Submission url is NULL");
         }
     }
-	
-    /*
-    private String genSuffix(){
-        String tldString = null;
-        try {
-            URL urlObject = new URL(url);
-            String[] domainNameParts = urlObject.getHost().split("\\.");
-            tldString = domainNameParts[domainNameParts.length-1];
-        }
-        catch (MalformedURLException e) {
-            System.out.println("!!!!! Could not parse top level domain !!!!!");
-        }
-        return tldString;
-    }
-        */
+	public String toString() {
+		return String.format("%23s  |%34s  |%40s  |%2s%-40s", this.category, this.url, this.email, "", this.submission);
+	}
 	public boolean isFailedConnection() {
 		return failedConnection;
 	}
-	
-    public String getUrl(){
+	public String getCategory() {
+		return category;
+	}
+	public String getUrl(){
         return url;
     }
 	public String getSubmission(){
         return submission;
     }
-	public String getCategory() {
-        return category;
-    }
 	public String getEmail() { return email;}
 
-
-    @Override
-    public String toString(){
-        return String.format("%23s  |%34s  |%40s  |%2s%-40s", category, url, email,"", submission);
-    }
 }

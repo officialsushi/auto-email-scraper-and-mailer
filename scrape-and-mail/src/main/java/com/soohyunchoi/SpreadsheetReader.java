@@ -171,9 +171,15 @@ public class SpreadsheetReader{
 		JavaScriptScraper scraper = new JavaScriptScraper();
         for (int n = 0; n < userCategories.size(); n++){
         	System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
+			PrintWriter outFile = new PrintWriter(new File("Results for " + LocalTime.now() + ".txt"));
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
-				publishers.add(new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i), scraper));
+				Publisher publisher = new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i), scraper);
+				publishers.add(publisher);
+				outFile.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
+//				System.out.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
+				
 			}
+			outFile.close();
 		}
 		scraper.quitDriver();
 		scraper.stopService();
@@ -220,6 +226,10 @@ public class SpreadsheetReader{
 			outFile.printf("\n%% of total emails found: %4.2f%%\n", (double)emailsFound / publishers.size() * 100);
 			outFile.printf("%% of emails from working connections found: %4.2f%%\n", (double)emailsFound / (publishers.size() - failedConnections) * 100);
 			outFile.println("------------------------------------------------------------------------------");
+			
+			for (Publisher a : publishers){
+				outFile.println(a.getCategory() + "," + a.getEmail() + "," + a.getSubmission() + "," + a.getUrl());
+			}
 			outFile.close();
 		} catch(Exception e) { }
 	}

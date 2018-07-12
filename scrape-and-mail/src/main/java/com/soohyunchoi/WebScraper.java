@@ -22,7 +22,6 @@ public class WebScraper {
 
     private final String url, urlSuffix;
     private final String[] pageTextJSoup;
-    private String[] pageTextSelenium;
     private JavaScriptScraper jsScraper;
     private Document document;
     private String email;
@@ -142,6 +141,9 @@ public class WebScraper {
 		catch (TimeoutException e){
 			System.out.print("\nTimed out!");
 		}
+		catch (Exception e){
+			System.out.print("\nSelenium WebDriver error");
+		}
 		
 		System.out.println();
 		System.out.println("\u001b[37mNo email on page!\u001b[0m\n");
@@ -160,6 +162,11 @@ public class WebScraper {
         System.out.println("> Finding email...");
 		Token tokens = new Token();
         for (int i = pageText.length-1; i >= 0; i--) {
+        	//prepretoken
+			if (i-2 > 0)
+				tokens.setPrePreToken(pageText[i-2]);
+			else
+				tokens.setPrePreToken(null);
         	//pretoken
         	if (i-1 > 0)
         		tokens.setPreToken(pageText[i-1]);
@@ -199,9 +206,29 @@ public class WebScraper {
 		String postToken = tokens.getPostToken();
 		String postPostToken = tokens.getPostPostToken();
 		String preToken = tokens.getPreToken();
+		String prePreToken = tokens.getPrePreToken();
 		
 		if ( (crawledEmail.contains("@") ) )
 			isValid = true;
+		
+		//looking for foo ( @ ) bar.com
+		if (preToken != null && postToken != null && isValid && preToken.equals("(") && postToken.equals(")")) {
+			crawledEmail = preToken + crawledEmail + postToken;
+			preToken = prePreToken;
+			postToken = postPostToken;
+			prePreToken = null;
+			postPostToken = null;
+		}
+		
+		//looking for foo ( at ) bar.com
+		if (preToken != null && postToken != null && crawledEmail.equals("at") && preToken.equals("(") && postToken.equals(")")) {
+			crawledEmail = preToken + crawledEmail + postToken;
+			preToken = prePreToken;
+			postToken = postPostToken;
+			prePreToken = null;
+			postPostToken = null;
+		}
+		
 		String[] badAtSignage = {"[at]", "[@]", "(at)", "(@)"};
 		for (int i = 0; i < badAtSignage.length; i++){
 			if (crawledEmail.contains(badAtSignage[i])) {
@@ -212,9 +239,15 @@ public class WebScraper {
 		//check for foo@bar[dot]com
 		String[] badDotSignage = {"[dot]", "(dot)"};
 		for (int i = 0; i < badDotSignage.length; i++){
-			if (crawledEmail.contains(badDotSignage[i])) {
+			//looking for @bar[dot]com
+			if (crawledEmail.contains(badDotSignage[i]))
 				crawledEmail = crawledEmail.replace(badDotSignage[i], ".");
-			}
+			//looking for @ bar[dot]com
+			if (postToken != null && postToken.contains(badDotSignage[i]))
+				postToken = postToken.replace(badDotSignage[i], ".");
+			//looking for @ bar [dot] com
+			if (postPostToken != null && postPostToken.equals(badDotSignage[i]))
+				postPostToken = urlSuffix;
 		}
 		if (!isValid) {
 			return false;
@@ -230,8 +263,10 @@ public class WebScraper {
 		//check if its social media or anything with @bullshit
 		if ( crawledEmail.indexOf("@") == 0
 				&& !containsValidSuffix(crawledEmail)
+				
 				&& postToken != null
 				&& !containsValidSuffix(postToken)
+				
 				&& postPostToken != null
 				&& !containsValidSuffix(postPostToken) ) {
 			System.out.println(crawledEmail + " is NOT valid!");
@@ -294,24 +329,39 @@ public class WebScraper {
 	 * @return cleaned email
 	 */
 	private String plainTextEmailCleaner (String crawledEmail) {
-		String correctSuffix = getCorrectTLD(crawledEmail);
-		String front = crawledEmail.substring(0, crawledEmail.indexOf("@"));
-		String back = crawledEmail.substring(crawledEmail.indexOf("@")+1, crawledEmail.length());
-		//checking and cleaning if [foo]@bar.com
-		if (front.startsWith("["))
-			front = front.substring(1, front.length());
-		if (front.endsWith("]"))
-			front = front.substring(0, front.length()-1);
-		if (front.contains(":"))
-			front = front.substring(front.indexOf(":") + 1);
-		//checking and cleaning if foo@bar.com doesn't end in .com so should take care of everything else
-		if (! (back.endsWith(correctSuffix)))
-			back = back.substring(0, back.lastIndexOf(correctSuffix) + correctSuffix.length());
-		//check if it starts with illegal characters
-		while(front.substring(0,2).matches("\\D\\W")) {
-			front = front.substring(1);
+		try {
+			String correctSuffix = getCorrectTLD(crawledEmail);
+			String front = crawledEmail.substring(0, crawledEmail.indexOf("@"));
+			String back = crawledEmail.substring(crawledEmail.indexOf("@") + 1, crawledEmail.length());
+			//checking and cleaning if [foo]@bar.com
+			if (front.startsWith("["))
+				front = front.substring(1, front.length());
+			if (front.endsWith("]"))
+				front = front.substring(0, front.length() - 1);
+			if (front.contains(":"))
+				front = front.substring(front.indexOf(":") + 1);
+			//checking and cleaning if foo@bar.com doesn't end in .com so should take care of everything else
+			if (! (back.endsWith(correctSuffix)))
+				back = back.substring(0, back.lastIndexOf(correctSuffix) + correctSuffix.length());
+			//check if it starts with illegal characters
+			while (front.substring(0, 2).matches("\\D\\W")) {
+				front = front.substring(1);
+			}
+			String finalEmail = front+"@"+back;
+			
+			//delete illegal characters
+			String[] illegalCharacters = {"/", "\\", ")", "(", "{", "}", "[", "]", "<", ">"};
+			for (String illegalChar : illegalCharacters){
+				while (finalEmail.contains(illegalChar)) {
+					finalEmail = finalEmail.replace(illegalChar, "");
+				}
+			}
+			return finalEmail;
+			
+		} catch(Exception e){
+			System.out.println("Email not valid");
+			return null;
 		}
-		return front + "@" + back;
 	}
 	/**
 	 * @return href data if it has email inside
@@ -390,11 +440,9 @@ public class WebScraper {
 			String[] domainNameParts = url.getHost().split("\\.");
 			String tldString = domainNameParts[domainNameParts.length - 1];
 			return "."+tldString;
-		}
-		catch(MalformedURLException e){
+		} catch(MalformedURLException e){
 			return ".uk";
-		}
-		catch(Exception e){
+		} catch(Exception e){
 			System.out.println(e);
 			return ".uk";
 		}
@@ -402,9 +450,6 @@ public class WebScraper {
 	public boolean isFailedConnection() {
 		return failedConnection;
 	}
-	public String getUrl(){
-        return url;
-    }
 	public String getEmail() {
         return email;
     }

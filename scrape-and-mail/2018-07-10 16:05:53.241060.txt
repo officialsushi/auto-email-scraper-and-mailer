@@ -1,0 +1,52 @@
+------------------------------------------------------------------------------
+     PERFORMANCE ANALYSIS2018-07-10 16:05:53.241060
+
+Start time: 15:05:00.376403			  End time: 16:05:53.236383
+# of publishers processed: 42		  # of emails found: 9
+# failed connections:   3 		      Out of:   42 (7.14%)
+
+% of total emails found: 21.43%
+% of emails from working connections found: 23.08%
+------------------------------------------------------------------------------
+Blogging/SEO/Marketing,null,http://www.bloggingtips.com/write-for-us/,bloggingtips.com
+Blogging/SEO/Marketing,info@bloggerspassion.com,https://bloggerspassion.com/submit-guest-post/,bloggerspassion.com
+Blogging/SEO/Marketing,marketing@kerneltraining.com,http://www.bloggodown.com/write-for-us,bloggodown.com
+Blogging/SEO/Marketing,null,http://millionclues.com/guest-blogging/,millionclues.com
+Blogging/SEO/Marketing,null,http://www.blogsolute.com/contact-us/,blogsolute.com
+Blogging/SEO/Marketing,null,http://www.bloggingcage.com/guest-post/,bloggingcage.com
+Blogging/SEO/Marketing,null,http://blog.kissmetrics.com/guest-blogging-for-kissmetrics/,blog.kissmetrics.com
+Blogging/SEO/Marketing,johnchow@johnchow.com,http://www.johnchow.com/get-more-exposure-for-your-blog-with-a-guest-post/,johnchow.com
+Blogging/SEO/Marketing,null,http://www.quickonlinetips.com/archives/guest-blogging/,quickonlinetips.com
+Blogging/SEO/Marketing,null,http://www.smartbloggerz.com/write-for-us/,smartbloggerz.com
+Blogging/SEO/Marketing,null,http://www.problogger.net/guidelines-and-suggestions-for-guest-posts-at-problogger/,problogger.net
+Blogging/SEO/Marketing,news@mashable.com,http://mashable.com/submit/,mashable.com
+Blogging/SEO/Marketing,null,http://www.searchenginepeople.com/blog/submit-guest-post-writer.html,searchenginepeople.com
+Blogging/SEO/Marketing,null,http://www.revenews.com/write-at-revenews/,revenews.com
+Blogging/SEO/Marketing,null,http://www.trafficgenerationcafe.com/about/contact/,trafficgenerationcafe.com
+Blogging/SEO/Marketing,null,http://www.searchenginejournal.com/contact/,searchenginejournal.com
+Blogging/SEO/Marketing,null,http://www.famousbloggers.net/submit-your-article,famousbloggers.net
+Blogging/SEO/Marketing,null,http://www.tipsblogger.com/submit-guest-post/,tipsblogger.com
+Blogging/SEO/Marketing,null,http://www.copyblogger.com/copyblogger-guest-post/,copyblogger.com
+Blogging/SEO/Marketing,null,http://www.youngprepro.com/submit-guest-post/,youngprepro.com
+Blogging/SEO/Marketing,contact@izideo.com,http://www.izideo.com/write-for-us/,izideo.comblog
+Blogging/SEO/Marketing,null,http://www.techmaish.com/write-for-us/,techmaish.com
+Blogging/SEO/Marketing,Shauna@BreathingProsperity.com,http://www.dailyblogtips.com/daily-blog-tips-guest-post-guidelines/,dailyblogtips.com
+Blogging/SEO/Marketing,vahe@marketingprofs.com,http://www.marketingprofs.com/write-for-us,marketingprofs.com
+Blogging/SEO/Marketing,null,http://basicblogtips.com/contact,basicblogtips.com
+Blogging/SEO/Marketing,null,http://hotblogtips.com/guest-post,hotblogtips.com
+Blogging/SEO/Marketing,null,http://www.ducttapemarketing.com/contact-duct-tape-marketing/,ducttapemarketing.com
+Blogging/SEO/Marketing,null,http://www.dragonblogger.com/guest_blogging/,dragonblogger.com
+Blogging/SEO/Marketing,null,http://www.iblogzone.com/2010/02/share-your-experience-and-opinions-with.html,iblogzone.com
+Blogging/SEO/Marketing,null,http://blogsuccess.com/guest-blogging/,blogsuccess.com
+Blogging/SEO/Marketing,null,http://www.socialmediaexaminer.com/writers/,socialmediaexaminer.com
+Blogging/SEO/Marketing,null,http://www.blogengage.com/blogger/guest-blog-here-on-blog-engage/,blogengage.com
+Blogging/SEO/Marketing,null,http://kikolani.com/guest-post-opportunities,kikolani.com
+Blogging/SEO/Marketing,null,http://smallbiztrends.com/about/article-submission-guidelines,smallbiztrends.com
+Blogging/SEO/Marketing,null,http://www.business2community.com/become-a-contributor,business2community.com
+Blogging/SEO/Marketing,Harsh@shoutmeloud.com,http://www.shoutmeloud.com/join-shoutmeloud,shoutmeloud.com
+Blogging/SEO/Marketing,null,http://www.webtrafficroi.com/guest-post/,webtrafficroi.com
+Blogging/SEO/Marketing,null,http://www.clickfire.com/guest-authors/,clickfire.com
+Blogging/SEO/Marketing,null,http://www.techzoomin.com/contact/,techzoomin.com
+Blogging/SEO/Marketing,null,http://wphostingdiscount.com/guest-author/,wphostingdiscount.com
+Blogging/SEO/Marketing,info@allbloggingtips.com,http://allbloggingtips.com/write-for-us/,allbloggingtips.com
+Blogging/SEO/Marketing,null,http://growmap.com/growmap-guest-blogging-guidelines/,growmap.com

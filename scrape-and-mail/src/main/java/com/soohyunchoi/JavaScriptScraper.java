@@ -8,14 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.By;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import org.apache.commons.lang3.time.StopWatch;
+import org.openqa.selenium.StaleElementReferenceException;
 
 /**
  * Scraper using Selenium to scrape off javascript sites
@@ -26,13 +23,13 @@ public class JavaScriptScraper extends TestCase {
 	private static ChromeDriverService service;
 	private WebDriver driver;
 	
-	public JavaScriptScraper() throws Exception {
+	public JavaScriptScraper() throws java.io.IOException {
 		createAndStartService();
 		createDriver();
 	}
 	
 	@BeforeClass
-	private static void createAndStartService() throws Exception {
+	private static void createAndStartService() throws java.io.IOException {
 		service = new ChromeDriverService.Builder()
 				.usingDriverExecutable(new File("/Applications/WebDrivers/chromedriver/"))
 				.usingAnyFreePort()
@@ -57,6 +54,7 @@ public class JavaScriptScraper extends TestCase {
 		driver = new ChromeDriver(chromeOptions);
 	}
 	
+	
 	@After
 	public void quitDriver() {
 		driver.quit();
@@ -68,11 +66,30 @@ public class JavaScriptScraper extends TestCase {
 	}
 	
 	public void connect(String url) {
-		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(8, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);
 		driver.get(url);
-
-		
+	}
+	
+	/**
+	 * Fix for StaleElementReferenceException
+	 * Thanks to http://darrellgrainger.blogspot.com/2012/06/staleelementexception.html
+	 * @param by
+	 * @return boolean if safe to proceed
+	 */
+	public boolean retryingFindClick(By by) {
+		boolean result = false;
+		int attempts = 0;
+		while(attempts < 2) {
+			try {
+				driver.findElement(by).click();
+				result = true;
+				break;
+			} catch(StaleElementReferenceException e) {
+			}
+			attempts++;
+		}
+		return result;
 	}
 	
 	public String[] scrape() {
@@ -86,9 +103,9 @@ public class JavaScriptScraper extends TestCase {
 		}
 		String[] elementsStringArray = new String[elementsRawSplit.size()];
 		elementsRawSplit.toArray(elementsStringArray);
-		for (String a : elementsRawSplit){
-			System.out.print(a + " // ");
-		}
+//		for (String a : elementsRawSplit){
+//			System.out.print(a + " // ");
+//		}
 		return elementsStringArray;
 	}
 	
@@ -101,12 +118,5 @@ public class JavaScriptScraper extends TestCase {
 		return elementsStringArray;
 	}
 }
-//
-//	public static void main(String args[]) throws Exception{
-//		JavaScriptScraper scraper = new JavaScriptScraper();
 //		scraper.connect("http://www.hypergridbusiness.com/about/write-for-us/");
-//		scraper.scrapeHref();
-//		scraper.quitDriver();
-//	}
-//}
 
