@@ -18,12 +18,20 @@ public class Publisher {
 		this.jsScraper = jsScraper;
 		this.email = scrapeForEmail();
     }
+    public Publisher(String category, String url, String submission) throws Exception{
+		this.category = category;
+		this.url = url;
+		this.submission = submission;
+		this.email = scrapeForEmail();
+    }
     private String scrapeForEmail() throws Exception{
         if (submission != null) {
-            WebScraper webScraper = new WebScraper(submission, jsScraper);
+            WebScraper webScraper = new WebScraper(submission);
             String emailFromScraper = webScraper.getEmail();
             this.failedConnection = webScraper.isFailedConnection();
+
             return emailFromScraper;
+            
         }
         else {
             throw new IllegalArgumentException("Submission url is NULL");

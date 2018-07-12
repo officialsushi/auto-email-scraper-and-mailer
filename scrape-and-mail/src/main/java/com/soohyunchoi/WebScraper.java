@@ -35,6 +35,12 @@ public class WebScraper {
 		this.urlSuffix = parseSuffix();
 		this.email = findEmail();
     }
+    public WebScraper(String url) throws Exception{
+        this.url = url;
+        this.pageTextJSoup = scrape();
+		this.urlSuffix = parseSuffix();
+		this.email = findEmail();
+    }
 	
 	/**
 	 * Connect and scrape entire HTML page
@@ -113,6 +119,7 @@ public class WebScraper {
 		
 		System.out.println("\nEmail not found in href, attempting to find in js... ");
 		try {
+			JavaScriptScraper scraper = new JavaScriptScraper();
 			StopWatch stopwatch = new StopWatch();
 			stopwatch.start();
 			jsScraper.connect(url);
@@ -137,6 +144,8 @@ public class WebScraper {
 				return foundEmail;
 			}
 			
+			scraper.quitDriver();
+			scraper.stopService();
 		}
 		catch (TimeoutException e){
 			System.out.print("\nTimed out!");

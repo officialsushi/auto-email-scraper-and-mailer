@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="63bb14ec-a9da-44af-ae0d-477d8a26f211" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jstest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jstest.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Token.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Publisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Publisher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/WebScraper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/WebScraper.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,8 +41,8 @@
       <file leaf-file-name="JavaScriptScraper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1665">
-              <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+            <state relative-caret-position="-749">
+              <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1614#1615#0" expanded="true" />
@@ -58,26 +57,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-137">
               <caret column="6" selection-start-column="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebScraper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-383">
-              <caret line="335" column="22" selection-start-line="335" selection-start-column="22" selection-end-line="335" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#8976#9007#0" expanded="true" />
-                <element signature="e#10205#10236#0" expanded="true" />
-                <element signature="e#13738#13739#0" expanded="true" />
-                <element signature="e#13768#13769#0" expanded="true" />
-                <element signature="e#13847#13848#0" expanded="true" />
-                <element signature="e#13875#13876#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -85,8 +66,8 @@
       <file leaf-file-name="SpreadsheetReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-602">
-              <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
+            <state relative-caret-position="156">
+              <caret line="175" column="119" selection-start-line="175" selection-start-column="119" selection-end-line="175" selection-end-column="119" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,8 +78,26 @@
       <file leaf-file-name="Publisher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="149">
+              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebScraper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="151" column="9" lean-forward="true" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8976#9007#0" expanded="true" />
+                <element signature="e#10205#10236#0" expanded="true" />
+                <element signature="e#13738#13739#0" expanded="true" />
+                <element signature="e#13768#13769#0" expanded="true" />
+                <element signature="e#13847#13848#0" expanded="true" />
+                <element signature="e#13875#13876#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,11 +119,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Index.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Token.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" />
       </list>
     </option>
   </component>
@@ -341,15 +340,16 @@
       <workItem from="1530648180139" duration="5498000" />
       <workItem from="1530817026044" duration="5232000" />
       <workItem from="1530921051511" duration="1294000" />
-      <workItem from="1531152631224" duration="28909000" />
+      <workItem from="1531152631224" duration="30555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40989000" />
+    <option name="totallyTimeSpent" value="42635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -361,18 +361,18 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32956383" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46206897" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36551723" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974359" visible="true" weight="0.2657512" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978261" visible="true" weight="0.2657512" />
       <window_info anchor="right" id="Database" order="3" weight="0.32956383" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" sideWeight="0.50256413" side_tool="true" visible="true" weight="0.2657512" />
+      <window_info id="Favorites" order="2" sideWeight="0.5021739" side_tool="true" visible="true" weight="0.2657512" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -588,10 +588,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/Publisher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="175" column="119" selection-start-line="175" selection-start-column="119" selection-end-line="175" selection-end-column="119" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="335" column="22" selection-start-line="335" selection-start-column="22" selection-end-line="335" selection-end-column="22" />
+        <state relative-caret-position="247">
+          <caret line="151" column="9" lean-forward="true" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#8976#9007#0" expanded="true" />
@@ -604,41 +635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Publisher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-602">
-          <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+        <state relative-caret-position="-749">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1614#1615#0" expanded="true" />

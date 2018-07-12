@@ -168,12 +168,12 @@ public class SpreadsheetReader{
 	 */
     private void listsToObjects(ArrayList<ArrayList<String>> lists) throws Exception {
         System.out.print("Converting lists to objects... ");
-		JavaScriptScraper scraper = new JavaScriptScraper();
+//		JavaScriptScraper scraper = new JavaScriptScraper();
         for (int n = 0; n < userCategories.size(); n++){
         	System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
 			PrintWriter outFile = new PrintWriter(new File("Results for " + LocalTime.now() + ".txt"));
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
-				Publisher publisher = new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i), scraper);
+				Publisher publisher = new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i));
 				publishers.add(publisher);
 				outFile.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
 //				System.out.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
@@ -181,8 +181,7 @@ public class SpreadsheetReader{
 			}
 			outFile.close();
 		}
-		scraper.quitDriver();
-		scraper.stopService();
+		
 	
 		System.out.println("Converted lists to objects!");
     }
