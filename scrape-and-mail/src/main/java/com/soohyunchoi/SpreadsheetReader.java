@@ -172,6 +172,7 @@ public class SpreadsheetReader{
         for (int n = 0; n < userCategories.size(); n++){
         	System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
 			PrintWriter outFile = new PrintWriter(new File("Results for " + LocalTime.now() + ".txt"));
+			JavaScriptScraper.createAndStartService();
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
 				Publisher publisher = new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i));
 				publishers.add(publisher);
@@ -179,6 +180,7 @@ public class SpreadsheetReader{
 //				System.out.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
 				
 			}
+			JavaScriptScraper.stopService();
 			outFile.close();
 		}
 		

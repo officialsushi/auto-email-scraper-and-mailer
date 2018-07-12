@@ -1,0 +1,1 @@
+Dog/Pet,http://www.dogtipper.com/submit/contribute-a-dog-tip-of-the-day,null,dogtipper.com
