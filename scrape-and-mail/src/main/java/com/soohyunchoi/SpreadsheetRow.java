@@ -1,12 +1,13 @@
 package com.soohyunchoi;
 import java.util.ArrayList;
 public class SpreadsheetRow {
-	private ArrayList<String> columns;
-	private ArrayList<String> columnValues;
+	private ArrayList<String> columnValues = new ArrayList();
 	public SpreadsheetRow(){
-	
 	}
-	public void addColumn(String value){
+	public void addColumnVal(String value){
 		columnValues.add(value);
+	}
+	public String getColumn(int index){
+		return columnValues.get(index);
 	}
 }

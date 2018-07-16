@@ -1,0 +1,11 @@
+------------------------------------------------------------------------------
+     PERFORMANCE ANALYSIS2018-07-16 14:20:47.478835
+
+Start time: 14:11:33.644298			  End time: 14:20:47.474032
+# of publishers processed: 1		  # of emails found: 0
+# failed connections:   1 		      Out of:    1 (100.00%)
+
+% of total emails found: 0.00%
+% of emails from working connections found:  NaN%
+------------------------------------------------------------------------------
+Automotive,null,http://www.eetimes.com/author.asp?doc_id=1326763,eetimes.com

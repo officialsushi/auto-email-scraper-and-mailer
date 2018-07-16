@@ -16,7 +16,7 @@ public class Publisher {
 		this.submission = submission;
 		this.email = scrapeForEmail();
     }
-	public Publisher(String category, String url, String email, String submission) throws Exception{
+	public Publisher(String category, String url, String email, String submission){
 		this.category = category;
 		this.url = url;
 		this.submission = submission;
@@ -34,18 +34,10 @@ public class Publisher {
 	public String toString() {
 		return String.format("%23s  |%34s  |%40s  |%2s%-40s", this.category, this.url, this.email, "", this.submission);
 	}
-	public boolean isFailedConnection() {
-		return failedConnection;
-	}
-	public String getCategory() {
-		return category;
-	}
-	public String getUrl(){
-        return url;
-    }
-	public String getSubmission(){
-        return submission;
-    }
+	public boolean isFailedConnection() { return failedConnection; }
+	public String getCategory() { return category; }
+	public String getUrl(){ return url; }
+	public String getSubmission(){ return submission;}
 	public String getEmail() { return email;}
 
 }

@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import java.time.LocalTime;
 import java.util.*;
 
-@SuppressWarnings("Duplicates")
 public class SpreadsheetReader{
     private final String directory;
     public ArrayList<Index> indices = new ArrayList();
@@ -21,30 +20,26 @@ public class SpreadsheetReader{
      * @param directory: directory of spreadsheet database, white space separated values
      * @throws Exception
      */
-    public SpreadsheetReader(String directory, int readOption) throws Exception {
+    public SpreadsheetReader(String directory, boolean emailsInc) throws Exception {
         this.directory = directory;
-		spreadsheetReader(readOption);
+		spreadsheetReader(emailsInc);
     }
 	
 	/**
 	 * read spreadsheets
 	 * @throws Exception
 	 */
-	public void spreadsheetReader(int readOption) throws Exception {
-		if(readOption == 0){
-			ArrayList<ArrayList<String>> lists = whiteSpaceSeparatedFileToLists();
-			genCategoryIndices(lists.get(0));
+	public void spreadsheetReader(boolean emailsIncluded) throws Exception {
+		if(emailsIncluded){
+			ArrayList<SpreadsheetRow> rows = csvToRows();
 			userChooseCategories();
-			listsToObjects(lists);
+			rowsToPublishersWithScrape(rows);
 		}
-		else if (readOption == 1){
-			ArrayList<ArrayList<String>> lists = commaSeparatedFileToLists();
-			genCategoryIndices(lists.get(0));
+		else {
+			ArrayList<SpreadsheetRow> lists = csvToRows();
 			userChooseCategories();
-			listsToObjects(lists);
+			rowsToPublishersWithScrape(lists);
 		}
-		else
-			throw new IllegalArgumentException("Illegal argument, gotta be 0 for white space separated or 1 for comma separated");
 	}
 	
 	/**
@@ -76,107 +71,72 @@ public class SpreadsheetReader{
 			System.out.println("Enter next category or 0 if finished selecting");
 		}
 	}
-
-    /**
-     * generates from what index to what index each category is
-     */
-    private void genCategoryIndices (ArrayList<String> cats) {
-        System.out.print("Generating category indices... ");
-        String cat;
-        int i = 0;
-        while (i < cats.size()) {
-            cat = cats.get(i);
-            int n = i;
-            while (i + 1 < cats.size() && cats.get(i).equals(cats.get(i + 1))) {
-                i++;
-            }
-            Index newIndices = new Index(cat, n, i);
-            indices.add(newIndices);
-            i++;
-        }
-        System.out.println("Category indices generated!");
-    }
-
-    /**
-     * gets file with white space separated values (must be scrubbed)
-     * turns each column into list
-     *
-	 * @returns ArrayList[0] = Categories, [1] = Website top level url, [2] = Website submission page url
-	 *
-     * @throws Exception
-     */
-    private ArrayList<ArrayList<String>> whiteSpaceSeparatedFileToLists() throws Exception {
-        System.out.print("Converting database file to list... ");
-        final int numberDatabaseColumns = 3;
-        String token;
-        File file = new File(directory);
-        Scanner inFile = new Scanner(file);
-        ArrayList<ArrayList<String>> lists = new ArrayList();
-        lists.add(new ArrayList<>());
-        lists.add(new ArrayList<>());
-        lists.add(new ArrayList<>());
-        int counter = numberDatabaseColumns;
-        while (inFile.hasNext()){
-            token = inFile.next();
-            lists.get(counter % numberDatabaseColumns).add(token);
-            counter++;
-        }
-        inFile.close();
-        System.out.println("Database file converted to lists!");
-        return lists;
-    }
 	
 	/**
 	 * gets file with comma separated values (must be scrubbed)
-	 * turns each column into list
+	 * finds indices per category
 	 *
 	 * @returns ArrayList[0] = Categories, [1] = Website top level url, [2] = Website submission page url
 	 *
 	 * @throws Exception
 	 */
-	private ArrayList<ArrayList<String>> commaSeparatedFileToLists() throws Exception {
+	private ArrayList<SpreadsheetRow> csvToRows() throws IOException {
 		System.out.print("Converting database file to list... ");
-		final int numberDatabaseColumns = 3;
 		String token;
 		File file = new File(directory);
 		Scanner inFile = new Scanner(file);
-		ArrayList<ArrayList<String>> lists = new ArrayList();
-		lists.add(new ArrayList<>());
-		lists.add(new ArrayList<>());
-		lists.add(new ArrayList<>());
-		int counter = numberDatabaseColumns;
+		ArrayList<SpreadsheetRow> rows = new ArrayList();
+		String category = "";
+		String newCategory;
+		int indexStart = 0;
+		int indexEnd = 0;
 		while (inFile.hasNextLine()){
 			token = inFile.nextLine();
+			SpreadsheetRow newRow = new SpreadsheetRow();
+			rows.add(newRow);
 			while(token.contains(",")){
-				String cutToken = token.substring(0, token.indexOf(","));
+				String nextToken = token.substring(0, token.indexOf(","));
 				token = token.substring(token.indexOf(",")+1);
-				lists.get(counter % numberDatabaseColumns).add(cutToken);
-				counter++;
+				newRow.addColumnVal(nextToken);
 			}
-			lists.get(counter % numberDatabaseColumns).add(token);
-			counter++;
+			// create Index objects for each category type
+			newRow.addColumnVal(token);
+			newCategory = newRow.getColumn(0);
+			if (!(category.equals(newCategory))) {
+				indices.add(new Index(category, indexStart, indexEnd));
+				category = newCategory;
+				indexStart = indexEnd + 1;
+			}
+			indexEnd++;
 		}
+		indices.add(new Index(category, indexStart, indexEnd));
+		indices.remove(0);
 		inFile.close();
 		System.out.println("Database file converted to lists!");
 		
-		return lists;
+		return rows;
 	}
 	
 	/**
-	 * Uses indices ArrayList to only parse the right categories
-	 * @param lists list of lists of the different data value types
+	 * Uses indices ArrayList to only parse the chosen categories
+	 * finds email thru webscrape
+	 * @param rows list of lists of the different data value types
 	 * @throws Exception
 	 */
-    private void listsToObjects(ArrayList<ArrayList<String>> lists) throws Exception {
+    private void rowsToPublishersWithScrape(ArrayList<SpreadsheetRow> rows) throws Exception {
         System.out.print("Converting lists to objects... ");
+        // for the scraper
 		JavaScriptScraper.createAndStartService();
+		// for logging purposes
 		String currentDateAndTime = java.time.LocalDate.now().toString() + " " + LocalTime.now().toString();
 		PrintWriter outFile = new PrintWriter(new File("Results for " + currentDateAndTime + ".csv"));
 		for (int n = 0; n < userCategories.size(); n++){
 			System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
-				Publisher publisher = new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i));
+				// category, website domain, submission url
+				Publisher publisher = new Publisher(rows.get(i).getColumn(0), rows.get(i).getColumn(1), rows.get(i).getColumn(2));
 				publishers.add(publisher);
+				// for logging
 				outFile.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
 			}
 		}
@@ -210,6 +170,7 @@ public class SpreadsheetReader{
 		System.out.printf("%% of emails from working connections found: %4.2f%%\n", (double)emailsFound / (publishers.size() - failedConnections) * 100);
 		System.out.println("--------------------------------------------------------------------");
 		String currentDateAndTime = java.time.LocalDate.now().toString() + " " + LocalTime.now().toString();
+		
 		//create new file with performance info
 		try {
 			PrintWriter outFile = new PrintWriter(new File(currentDateAndTime + ".txt"));

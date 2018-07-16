@@ -1,0 +1,10 @@
+------------------------------------------------------------------------------
+     PERFORMANCE ANALYSIS2018-07-16 14:21:54.628344
+
+Start time: 14:21:49.297228			  End time: 14:21:54.627021
+# of publishers processed: 0		  # of emails found: 0
+# failed connections:   0 		      Out of:    0 ( NaN%)
+
+% of total emails found:  NaN%
+% of emails from working connections found:  NaN%
+------------------------------------------------------------------------------

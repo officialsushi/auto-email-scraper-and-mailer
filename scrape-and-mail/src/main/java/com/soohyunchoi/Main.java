@@ -13,7 +13,7 @@ import java.time.LocalTime;
 public class Main {
     public static void main(String[] args) throws Exception {
 		LocalTime startTime = LocalTime.now();
-		SpreadsheetReader reader = new SpreadsheetReader("databasecommas.csv", 1);
+		SpreadsheetReader reader = new SpreadsheetReader("databasecommastest.csv", false);
 //		SpreadsheetReader reader = new SpreadsheetReader("jstest.csv", 1);
 		printPublishers(reader);
 		reader.evaluatePerformance(startTime);
