@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 import java.time.LocalTime;
 import java.util.*;
 
+@SuppressWarnings("Duplicates")
 public class SpreadsheetReader{
     private final String directory;
     public ArrayList<Index> indices = new ArrayList();
@@ -168,28 +169,24 @@ public class SpreadsheetReader{
 	 */
     private void listsToObjects(ArrayList<ArrayList<String>> lists) throws Exception {
         System.out.print("Converting lists to objects... ");
-//		JavaScriptScraper scraper = new JavaScriptScraper();
-        for (int n = 0; n < userCategories.size(); n++){
-        	System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
-			PrintWriter outFile = new PrintWriter(new File("Results for " + LocalTime.now() + ".txt"));
-			JavaScriptScraper.createAndStartService();
+		JavaScriptScraper.createAndStartService();
+		String currentDateAndTime = java.time.LocalDate.now().toString() + " " + LocalTime.now().toString();
+		PrintWriter outFile = new PrintWriter(new File("Results for " + currentDateAndTime + ".csv"));
+		for (int n = 0; n < userCategories.size(); n++){
+			System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
 				Publisher publisher = new Publisher((lists.get(0)).get(i), (lists.get(1)).get(i), (lists.get(2)).get(i));
 				publishers.add(publisher);
 				outFile.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
-//				System.out.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
-				
 			}
-			JavaScriptScraper.stopService();
-			outFile.close();
 		}
-		
-	
+		outFile.close();
+		JavaScriptScraper.stopService();
 		System.out.println("Converted lists to objects!");
     }
 	
 	/**
-	 * Prints and creates file of performance stats, for logging purposes
+	 * Prints and creates file of performance stats, only works if program goes thru w/o crashing
 	 * @param startTime
 	 * @throws IOException
 	 */
@@ -212,12 +209,10 @@ public class SpreadsheetReader{
 		System.out.printf("\n%% of total emails found: %4.2f%%\n", (double)emailsFound / publishers.size() * 100);
 		System.out.printf("%% of emails from working connections found: %4.2f%%\n", (double)emailsFound / (publishers.size() - failedConnections) * 100);
 		System.out.println("--------------------------------------------------------------------");
-		
-		
 		String currentDateAndTime = java.time.LocalDate.now().toString() + " " + LocalTime.now().toString();
+		//create new file with performance info
 		try {
 			PrintWriter outFile = new PrintWriter(new File(currentDateAndTime + ".txt"));
-			
 			outFile.println("------------------------------------------------------------------------------");
 			outFile.println("     PERFORMANCE ANALYSIS" + currentDateAndTime);
 			outFile.println();
@@ -234,10 +229,8 @@ public class SpreadsheetReader{
 			outFile.close();
 		} catch(Exception e) { }
 	}
-	
 	/**
-	 *  *******======= not tested so idk if it works =====*****
-	 * @return string in table format
+	 * @return long string in table format
 	 */
 	@Override
 	public String toString() {

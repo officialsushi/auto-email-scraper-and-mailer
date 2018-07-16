@@ -11,22 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
 /**
  * Scraper using Selenium to scrape off javascript sites
  * especially useful for CloudFare email protection
  */
-
 public class JavaScriptScraper extends TestCase {
 	public static ChromeDriverService service;
 	private WebDriver driver;
-	
-	public JavaScriptScraper() throws java.io.IOException {
+	public JavaScriptScraper() {
 		createDriver();
 	}
-	
 	@BeforeClass
 	public static void createAndStartService() throws java.io.IOException {
 		service = new ChromeDriverService.Builder()
@@ -35,12 +29,8 @@ public class JavaScriptScraper extends TestCase {
 				.build();
 		service.start();
 	}
-	
 	@AfterClass
-	public static void stopService() {
-		service.stop();
-	}
-	
+	public static void stopService() { service.stop(); }
 	@Before
 	private void createDriver() {
 		ChromeOptions chromeOptions = new ChromeOptions();
@@ -49,48 +39,15 @@ public class JavaScriptScraper extends TestCase {
 		chromeOptions.addArguments("--disable-gpu");
 		chromeOptions.addArguments("--disable-extensions");
 		chromeOptions.addArguments("--load-images=no");
-		
 		driver = new ChromeDriver(chromeOptions);
 	}
-	
-	
 	@After
-	public void quitDriver() {
-		driver.quit();
-	}
-	
-	@Test
-	private void testGoogleSearch() {
-		driver.get("http://www.google.com");
-	}
-	
+	public void quitDriver() { driver.quit(); }
 	public void connect(String url) {
 //		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);
 		driver.get(url);
 	}
-	
-	/**
-	 * Fix for StaleElementReferenceException
-	 * Thanks to http://darrellgrainger.blogspot.com/2012/06/staleelementexception.html
-	 * @param by
-	 * @return boolean if safe to proceed
-	 */
-	public boolean retryingFindClick(By by) {
-		boolean result = false;
-		int attempts = 0;
-		while(attempts < 2) {
-			try {
-				driver.findElement(by).click();
-				result = true;
-				break;
-			} catch(StaleElementReferenceException e) {
-			}
-			attempts++;
-		}
-		return result;
-	}
-	
 	public String[] scrape() {
 		List<WebElement> elementsRaw = driver.findElements(By.tagName("div"));
 		ArrayList<String> elementsRawSplit = new ArrayList<>();
@@ -102,12 +59,8 @@ public class JavaScriptScraper extends TestCase {
 		}
 		String[] elementsStringArray = new String[elementsRawSplit.size()];
 		elementsRawSplit.toArray(elementsStringArray);
-//		for (String a : elementsRawSplit){
-//			System.out.print(a + " // ");
-//		}
 		return elementsStringArray;
 	}
-	
 	public String[] scrapeHref() {
 		List<WebElement> elementsRaw = driver.findElements(By.tagName("a"));
 		String[] elementsStringArray = new String[elementsRaw.size()];

@@ -19,29 +19,19 @@ import java.net.URL;
 
 
 public class WebScraper {
-
     private final String url, urlSuffix;
     private final String[] pageTextJSoup;
-    private JavaScriptScraper jsScraper;
     private Document document;
     private String email;
     private boolean failedConnection;
 	private static String[] commonTLDs = {".com", ".org", ".uk", ".net"};
-    
-    public WebScraper(String url, JavaScriptScraper jsScraper) throws Exception{
-    	this.jsScraper = jsScraper;
+	//Used if using different driver instances per webscraper
+	public WebScraper(String url) throws Exception{
         this.url = url;
         this.pageTextJSoup = scrape();
 		this.urlSuffix = parseSuffix();
 		this.email = findEmail();
     }
-    public WebScraper(String url) throws Exception{
-        this.url = url;
-        this.pageTextJSoup = scrape();
-		this.urlSuffix = parseSuffix();
-		this.email = findEmail();
-    }
-	
 	/**
 	 * prioritizes scraping in the set order
 	 * 1. plaintext using jsoup
@@ -51,28 +41,23 @@ public class WebScraper {
 	 * @return email or null if no email is found
 	 */
 	private String findEmail() {
-		//immediately return null if connection fails
+		//immediately return null if connection failed
 		if (failedConnection)
 			return null;
-		
 		String foundEmail = findEmailFromText(pageTextJSoup);
-		if (foundEmail != null) {
+		if (foundEmail != null)
 			return foundEmail;
-		}
-		
 		System.out.print("Email not found in plaintext, attempting to find in href... ");
 		try {
 			foundEmail = findEmailFromHref();
 		} catch (Exception e){
-			System.out.println(e);
+			System.out.println("Exception while attempting to find email from href: " + e);
 		}
-		if (foundEmail != null) {
+		if (foundEmail != null)
 			return foundEmail;
-		}
-		
 		System.out.println("\nEmail not found in href, attempting to find in js... ");
 		try {
-			JavaScriptScraper scraper = new JavaScriptScraper();
+			JavaScriptScraper jsScraper = new JavaScriptScraper();
 			StopWatch stopwatch = new StopWatch();
 			stopwatch.start();
 			jsScraper.connect(url);
@@ -81,31 +66,27 @@ public class WebScraper {
 			try {
 				foundEmail = findEmailFromText(jsScraper.scrape());
 			} catch (Exception e){
-				System.out.println(e);
+				System.out.println("Exception while attempting to find email from JS text: " + e);
 			}
 			if (foundEmail != null) {
-				scraper.quitDriver();
+				jsScraper.quitDriver();
 				return foundEmail;
 			}
-			
 			System.out.print("Email not found in js, attempting to find in jshref... ");
 			try {
 				foundEmail = findEmailFromJavaScriptHref(jsScraper.scrapeHref());
 			} catch (Exception e){
-				System.out.println(e);
+				System.out.println("Exception while attempting to find email from JS href: " + e);
 			}
 			if (foundEmail != null) {
-				scraper.quitDriver();
+				jsScraper.quitDriver();
 				return foundEmail;
 			}
-			
-			scraper.quitDriver();
-		}
-		catch (TimeoutException e){
-			System.out.print("\nTimed out!");
-		}
-		catch (Exception e){
-			System.out.print("\nSelenium WebDriver error");
+			jsScraper.quitDriver();
+		} catch (TimeoutException e){
+			System.out.print("Timed out!");
+		} catch (Exception e){
+			System.out.print("Exception while attempting to launch JS scrape: " + e);
 		}
 		
 		System.out.println();
@@ -154,7 +135,7 @@ public class WebScraper {
 			failedConnection = true;
 			return null;
 		} catch (Exception a){
-			System.out.println(a + "\n");
+			System.out.println("Connection error: " + a + "\n");
 			failedConnection = true;
 			return null;
 		}
@@ -166,9 +147,8 @@ public class WebScraper {
 	 * @throws MalformedURLException
 	 */
 	private String findEmailFromText(String[] pageText){
-        if (pageText == null){
+        if (pageText == null)
             return null;
-        }
         System.out.println("> Finding email...");
 		Token tokens = new Token();
         for (int i = pageText.length-1; i >= 0; i--) {
@@ -200,7 +180,6 @@ public class WebScraper {
 				return plainTextEmailCleaner(email);
 			}
 		}
-        
         return null;
     }
 	
@@ -210,17 +189,14 @@ public class WebScraper {
 	 * @return true or false if the @ is part of an email
 	 */
 	private boolean isValidEmail(Token tokens) {
-		
 		boolean isValid = false;
 		String crawledEmail = tokens.getToken();
 		String postToken = tokens.getPostToken();
 		String postPostToken = tokens.getPostPostToken();
 		String preToken = tokens.getPreToken();
 		String prePreToken = tokens.getPrePreToken();
-		
 		if ( (crawledEmail.contains("@") ) )
 			isValid = true;
-		
 		//looking for foo ( @ ) bar.com
 		if (preToken != null && postToken != null && isValid && preToken.equals("(") && postToken.equals(")")) {
 			crawledEmail = preToken + crawledEmail + postToken;
@@ -229,7 +205,6 @@ public class WebScraper {
 			prePreToken = null;
 			postPostToken = null;
 		}
-		
 		//looking for foo ( at ) bar.com
 		if (preToken != null && postToken != null && crawledEmail.equals("at") && preToken.equals("(") && postToken.equals(")")) {
 			crawledEmail = preToken + crawledEmail + postToken;
@@ -238,7 +213,6 @@ public class WebScraper {
 			prePreToken = null;
 			postPostToken = null;
 		}
-		
 		String[] badAtSignage = {"[at]", "[@]", "(at)", "(@)"};
 		for (String atSign : badAtSignage){
 			if (crawledEmail.contains(atSign)) {
@@ -259,16 +233,13 @@ public class WebScraper {
 			if (postPostToken != null && postPostToken.equals(badDotSignage[i]))
 				postPostToken = urlSuffix;
 		}
-		if (!isValid) {
+		if (!isValid)
 			return false;
-		}
-		
 		System.out.print("Checking to see if " + crawledEmail + " is a valid email... ");
 		//decrypt shitty encryption for @ sign
 		for (int i = 0; i < badAtSignage.length; i++){
-			if(crawledEmail.contains(badAtSignage[i])){
+			if(crawledEmail.contains(badAtSignage[i]))
 				crawledEmail = crawledEmail.replace(badAtSignage[i], "@");
-			}
 		}
 		//check if its social media or anything with @bullshit
 		if ( crawledEmail.indexOf("@") == 0
@@ -283,21 +254,17 @@ public class WebScraper {
 			return false;
 		}
 		//check if they separated urlSuffix from back
-		if (postPostToken != null && containsValidSuffix(postPostToken)) {
+		if (postPostToken != null && containsValidSuffix(postPostToken))
 			postToken += postPostToken;
-		}
 		//check if the thing only picked up the @ sign since they did front @ back.com
-		if (preToken != null && postToken != null && crawledEmail.length() == 1) {
+		if (preToken != null && postToken != null && crawledEmail.length() == 1)
 			crawledEmail = preToken + crawledEmail + postToken;
-		}
 		//checking to if its @foo.com
-		if (preToken != null && crawledEmail.indexOf("@") == 0 && containsValidSuffix(postToken)) {
+		if (preToken != null && crawledEmail.indexOf("@") == 0 && containsValidSuffix(postToken))
 			crawledEmail = preToken + crawledEmail;
-		}
 		//checking to see if its foo@
-		if (postToken != null && crawledEmail.indexOf("@") == crawledEmail.length()-1) {
+		if (postToken != null && crawledEmail.indexOf("@") == crawledEmail.length()-1)
 			crawledEmail = crawledEmail + postToken;
-		}
 		int length = crawledEmail.length();
 		String back = crawledEmail.substring(crawledEmail.indexOf("@")+1, length);
 		if (crawledEmail == null) {
@@ -353,14 +320,16 @@ public class WebScraper {
 			//checking and cleaning if foo@bar.com doesn't end in .com so should take care of everything else
 			if (! (back.endsWith(correctSuffix)))
 				back = back.substring(0, back.lastIndexOf(correctSuffix) + correctSuffix.length());
+			//checking for asdfasf|foo@bar.com
+			if (front.contains("|"))
+				front = front.substring(front.indexOf("|")+1);
 			//check if it starts with illegal characters
 			while (front.substring(0, 2).matches("\\D\\W")) {
 				front = front.substring(1);
 			}
 			String finalEmail = front+"@"+back;
-			
 			//delete illegal characters
-			String[] illegalCharacters = {"/", "\\", ")", "(", "{", "}", "[", "]", "<", ">", "\"", "'"};
+			String[] illegalCharacters = {"%20", "//", "/", "\\", ")", "(", "{", "}", "[", "]", "<", ">", "\"", "'", "“"};
 			for (String illegalChar : illegalCharacters){
 				while (finalEmail.contains(illegalChar)) {
 					finalEmail = finalEmail.replace(illegalChar, "");
@@ -378,7 +347,7 @@ public class WebScraper {
 	 * @throws Exception
 	 */
 	@SuppressWarnings("Duplicates")
-	private String findEmailFromHref() throws Exception {
+	private String findEmailFromHref() {
 		Elements links = document.select("a[href~=.*@.*]");
 		for (int i = links.size()-1; i >= 0; i--) {
 			String scrapedEmail = links.get(i).attr("href");
@@ -402,10 +371,9 @@ public class WebScraper {
 	
 	/**
 	 * @return parse js href data if it has email inside (SLOW)
-	 * @throws Exception
 	 */
 	@SuppressWarnings("Duplicates")
-	private String findEmailFromJavaScriptHref(String[] hrefTokens) throws Exception {
+	private String findEmailFromJavaScriptHref(String[] hrefTokens){
 		for (int i = hrefTokens.length-1; i >= 0; i--) {
 			String scrapedEmail = hrefTokens[i];
 			if(scrapedEmail != null && scrapedEmail.indexOf("@") > 0){
@@ -431,7 +399,7 @@ public class WebScraper {
 	 * @param crawledEmail confirmed potential email that is not clean
 	 * @return cleaned email
 	 */
-	private String hrefEmailCleaner (String crawledEmail) throws Exception{
+	private String hrefEmailCleaner (String crawledEmail){
 		String correctSuffix = getCorrectTLD(crawledEmail);
 		//split foo@bar.com into foo / bar.com
 		String front = crawledEmail.substring(0, crawledEmail.indexOf("@"));

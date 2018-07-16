@@ -7,12 +7,12 @@ import java.time.LocalTime;
  * July 3 pre-selenium: all had ~30% efficiency
  * July 5 pre-selenium: all had ~30% efficiency
  * July 10 selenium: all had ~43% efficiency
+ * July 12 selenium: all had ~50% efficiency
  */
 
 public class Main {
     public static void main(String[] args) throws Exception {
 		LocalTime startTime = LocalTime.now();
-
 		SpreadsheetReader reader = new SpreadsheetReader("databasecommas.csv", 1);
 //		SpreadsheetReader reader = new SpreadsheetReader("jstest.csv", 1);
 		printPublishers(reader);
