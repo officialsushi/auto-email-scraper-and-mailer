@@ -10,4 +10,7 @@ public class SpreadsheetRow {
 	public String getColumn(int index){
 		return columnValues.get(index);
 	}
+	public int getNumColumns(){
+		return columnValues.size();
+	}
 }

@@ -1,0 +1,41 @@
+Email sent to info@retireby45.com: 
+
+<html>
+<head>
+    <style>
+        body{
+            padding: 20px, 20px, 20px, 20px;}
+        p {
+            font-family: "Arial", "Helvetica", "Verdana", "Geneva", sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-variant: normal;
+            line-height: 20px;}
+        a {
+            text-decoration: none;}
+        .sigPic{
+            width: 130px; 
+            height: 47.08px;}
+    </style>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        <p>
+        Hi Retireby45,<br><br>
+        We’re 360 Payments, a Bay Area payments company, and I'm reaching out because we’d love to contribute an article to your blog. We are happy to return the favor by publishing an article authored by your team to our thousands of customers and connections on social media.<br>
+            <br>
+        We’ve written hundreds of articles read by thousands of business professionals, which are shown <a href="https://www.360payments.com/blog/">here</a>. I am also open to writing a customized article that works for your audience. I can author articles on the payment industry, entrepreneurship and women in leadership.<br>
+            <br>
+        I look forward to your response, and please do not hesitate to contact me with questions.<br>
+            <br>
+        Thanks!<br>
+        <br>
+        <strong>Katie Russell</strong><br>
+        Digital Marketing Manager<br>
+        <img alt="360 Payments" class="sigPic" src="https://www.360payments.com/wp-content/uploads/2017/02/logo-1.png"><br>
+        Direct: (215) 808-5678<br>
+        <a href ="https://www.360payments.com/">www.360payments.com</a><br>
+        <a href ="https://www.linkedin.com/in/kate-e-russell">www.linkedin.com/in/kate-e-russell</a><br>
+        </p>
+    </body>
+</html>

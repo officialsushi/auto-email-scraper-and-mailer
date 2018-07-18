@@ -3,16 +3,156 @@
   <component name="ChangeListManager">
     <list default="true" id="63bb14ec-a9da-44af-ae0d-477d8a26f211" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databasecommas.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databasecommas.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-05 14:01:24.166119.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-05 14:36:19.800202.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-06 16:53:00.242152.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-09 13:06:17.722224.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-09 13:26:37.991176.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-09 13:29:32.281904.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-10 09:58:21.484468.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-10 10:01:05.484979.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-10 10:20:16.665507.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-10 10:21:03.253805.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-10 10:23:19.859985.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-10 10:25:05.449203.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-10 16:05:53.241060.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-11 01:30:21.175814.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-11 02:59:08.195311.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-11 19:44:17.880413.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-12 06:14:59.185065.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-12 22:17:35.633323.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-13 17:42:53.908604.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-16 14:20:47.478835.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-16 14:21:54.628344.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-16 14:24:01.620570.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-16 14:26:15.861831.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-16 14:29:41.711011.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-16 14:31:22.895778.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:03:17.907300.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:21:59.044923.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:28:27.393103.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:28:27.393576.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:37:46.587892.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:37:52.240694.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:47:40.683338.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:56:22.216665.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:56:27.478210.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 00:59:09.280351.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:03:39.835425.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:10:51.526346.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:23:40.037588.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:25:32.578813.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:36:50.053587.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:39:45.633340.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:41:50.373776.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:45:37.846081.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:48:51.443298.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:48:53.462923.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:50:38.667974.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:54:36.613436.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:55:09.650015.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:55:28.193863.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:55:32.162161.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:56:33.567119.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 01:58:17.266747.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:02:37.113374.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:09:38.645903.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:12:59.281501.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:15:09.679999.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:17:01.697469.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:17:01.697621.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:19:48.245504.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:19:48.688215.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:21:35.988722.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:23:54.885215.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:23:58.620793.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:24:51.776514.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:25:01.939932.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:26:07.405031.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:28:28.873041.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:31:44.463081.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:32:19.579493.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:32:23.155029.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:32:39.550278.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:36:36.404927.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:38:16.039142.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:38:29.964180.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:38:50.069325.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:38:53.818866.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:39:03.780204.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:39:38.931789.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:40:12.512517.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:42:07.471941.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:42:08.710473.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:44:56.781699.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:47:19.893317.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:47:22.736335.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:49:19.570309.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:49:28.169786.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:49:34.664755.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:49:38.262906.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:52:00.776562.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:55:33.234869.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:56:00.761169.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:56:46.417461.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 02:58:46.828864.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 05:49:36.660435.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 06:03:55.571727.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 06:04:58.479476.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 06:08:56.670053.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 06:14:07.136646.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 19:10:37.682770.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 19:23:37.060765.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 2018-07-12 11:04:58.915709.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:33:37.067190.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:33:57.760793.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:35:05.630384.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:41:30.751029.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:43:52.687703.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:43:52.692956.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:51:35.798161.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:51:53.086949.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:52:50.540167.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 21:58:31.416325.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:00:55.848102.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:00:55.852756.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:11:20.592433.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:11:45.025939.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:25:17.087776.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:41:27.312659.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:41:54.155909.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:48:54.000349.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 22:59:57.790789.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:19:24.607756.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:32:29.432728.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:42:26.453649.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:42:41.243341.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:44:51.636506.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:45:08.935854.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:45:52.798714.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:46:07.786427.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:52:49.522995.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:55:03.678504.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:55:52.633721.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:56:53.408401.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Folder With Items/Results for 23:58:38.153041.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results for 2018-07-13 13:57:23.002832.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databasecommas.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databasecommastest.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jstest.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/autoMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/autoMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/autoMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/AutoMail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Publisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Publisher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetRow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/WebScraper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/WebScraper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail$SpreadsheetReader.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,66 +196,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Publisher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WebScraper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="346" column="24" lean-forward="true" selection-start-line="346" selection-start-column="24" selection-end-line="346" selection-end-column="24" />
+            <state relative-caret-position="-916">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#11522#11553#0" expanded="true" />
                 <element signature="e#12322#12353#0" expanded="true" />
-                <element signature="e#14421#14422#0" expanded="true" />
-                <element signature="e#14451#14452#0" expanded="true" />
                 <element signature="e#14479#14480#0" expanded="true" />
-                <element signature="e#14507#14508#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpreadsheetReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1946">
-              <caret line="147" column="7" selection-start-line="147" selection-start-column="7" selection-end-line="147" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autoMail.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/autoMail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#479#510#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#1140#1322#0" expanded="true" />
-                <element signature="e#1321#1322#0" expanded="true" />
+                <element signature="e#14509#14510#0" expanded="true" />
+                <element signature="e#14537#14538#0" expanded="true" />
+                <element signature="e#14565#14566#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,13 +217,70 @@
       <file leaf-file-name="SpreadsheetRow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetRow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
               <folding>
                 <element signature="e#192#193#0" expanded="true" />
                 <element signature="e#222#223#0" expanded="true" />
                 <element signature="e#273#274#0" expanded="true" />
                 <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpreadsheetReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8492#8493#0" expanded="true" />
+                <element signature="e#8516#8517#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Publisher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutoMail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/AutoMail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#423#454#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#986#987#0" expanded="true" />
+                <element signature="e#8778#8956#0" expanded="true" />
+                <element signature="e#8955#8956#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,6 +308,11 @@
     <findStrings>
       <find>\n\n\n\n</find>
       <find>inal</find>
+      <find>padding</find>
+      <find>We</find>
+      <find>\n</find>
+      <find>padding:</find>
+      <find>null</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,12 +326,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Token.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetRow.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/autoMail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/AutoMail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" />
       </list>
     </option>
   </component>
@@ -290,7 +446,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -309,7 +465,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager">
+    <configuration name="AutoMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.soohyunchoi.AutoMail" />
+      <module name="scrape-and-mail" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.soohyunchoi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="JavaScriptScraper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.soohyunchoi.JavaScriptScraper" />
       <module name="scrape-and-mail" />
@@ -334,17 +501,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="autoMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.soohyunchoi.autoMail" />
-      <module name="scrape-and-mail" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.soohyunchoi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -387,12 +543,12 @@
     <list>
       <item itemvalue="Application.JavaScriptScraper" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.autoMail" />
+      <item itemvalue="Application.AutoMail" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AutoMail" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.autoMail" />
         <item itemvalue="Application.JavaScriptScraper" />
       </list>
     </recent_temporary>
@@ -414,12 +570,12 @@
       <workItem from="1531152631224" duration="31446000" />
       <workItem from="1531376847477" duration="289000" />
       <workItem from="1531378334846" duration="2014000" />
-      <workItem from="1531412101187" duration="18815000" />
+      <workItem from="1531412101187" duration="39720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65111000" />
+    <option name="totallyTimeSpent" value="86016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -435,18 +591,18 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32956383" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3337931" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33931035" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49482402" visible="true" weight="0.27786753" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.27786753" />
       <window_info anchor="right" id="Database" order="3" weight="0.32956383" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" sideWeight="0.505176" side_tool="true" visible="true" weight="0.27786753" />
+      <window_info id="Favorites" order="2" sideWeight="0.5052192" side_tool="true" visible="true" weight="0.27786753" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,17 +620,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -505,10 +654,10 @@
             <element signature="imports" expanded="true" />
             <element signature="e#11522#11553#0" expanded="true" />
             <element signature="e#12322#12353#0" expanded="true" />
-            <element signature="e#14421#14422#0" expanded="true" />
-            <element signature="e#14451#14452#0" expanded="true" />
             <element signature="e#14479#14480#0" expanded="true" />
-            <element signature="e#14507#14508#0" expanded="true" />
+            <element signature="e#14509#14510#0" expanded="true" />
+            <element signature="e#14537#14538#0" expanded="true" />
+            <element signature="e#14565#14566#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -526,6 +675,8 @@
           <caret line="170" column="50" lean-forward="true" selection-start-line="170" selection-start-column="50" selection-end-line="170" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#8492#8493#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -567,6 +718,8 @@
           <caret line="175" column="119" selection-start-line="175" selection-start-column="119" selection-end-line="175" selection-end-column="119" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#8492#8493#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -586,10 +739,10 @@
             <element signature="imports" expanded="true" />
             <element signature="e#11522#11553#0" expanded="true" />
             <element signature="e#12322#12353#0" expanded="true" />
-            <element signature="e#14421#14422#0" expanded="true" />
-            <element signature="e#14451#14452#0" expanded="true" />
             <element signature="e#14479#14480#0" expanded="true" />
-            <element signature="e#14507#14508#0" expanded="true" />
+            <element signature="e#14509#14510#0" expanded="true" />
+            <element signature="e#14537#14538#0" expanded="true" />
+            <element signature="e#14565#14566#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -629,6 +782,8 @@
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#8492#8493#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -651,10 +806,10 @@
             <element signature="imports" expanded="true" />
             <element signature="e#11522#11553#0" expanded="true" />
             <element signature="e#12322#12353#0" expanded="true" />
-            <element signature="e#14421#14422#0" expanded="true" />
-            <element signature="e#14451#14452#0" expanded="true" />
             <element signature="e#14479#14480#0" expanded="true" />
-            <element signature="e#14507#14508#0" expanded="true" />
+            <element signature="e#14509#14510#0" expanded="true" />
+            <element signature="e#14537#14538#0" expanded="true" />
+            <element signature="e#14565#14566#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -792,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Index.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -806,63 +954,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.6.1/javax.mail-1.6.1.jar!/javax/mail/Authenticator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+          <folding>
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetRow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
           <folding>
             <element signature="e#192#193#0" expanded="true" />
             <element signature="e#222#223#0" expanded="true" />
             <element signature="e#273#274#0" expanded="true" />
             <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="346" column="24" lean-forward="true" selection-start-line="346" selection-start-column="24" selection-end-line="346" selection-end-column="24" />
+        <state relative-caret-position="-916">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#11522#11553#0" expanded="true" />
             <element signature="e#12322#12353#0" expanded="true" />
-            <element signature="e#14421#14422#0" expanded="true" />
-            <element signature="e#14451#14452#0" expanded="true" />
             <element signature="e#14479#14480#0" expanded="true" />
-            <element signature="e#14507#14508#0" expanded="true" />
+            <element signature="e#14509#14510#0" expanded="true" />
+            <element signature="e#14537#14538#0" expanded="true" />
+            <element signature="e#14565#14566#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1946">
-          <caret line="147" column="7" selection-start-line="147" selection-start-column="7" selection-end-line="147" selection-end-column="7" />
+        <state relative-caret-position="129">
+          <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#8492#8493#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/autoMail.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/AutoMail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="55" />
+        <state relative-caret-position="300">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#479#510#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#1140#1322#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#423#454#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#8778#8956#0" expanded="true" />
+            <element signature="e#8955#8956#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

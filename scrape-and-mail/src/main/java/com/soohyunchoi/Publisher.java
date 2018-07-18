@@ -1,5 +1,8 @@
 package com.soohyunchoi;
 
+import javax.mail.internet.MimeMessage;
+import java.io.IOException;
+
 /**
  * publisher object
  *
@@ -8,21 +11,36 @@ package com.soohyunchoi;
  */
 
 public class Publisher {
-    private final String category, url, email, submission;
+    private final String category, email, submission;
+    private String url;
 	public boolean failedConnection;
-    public Publisher(String category, String url, String submission) throws Exception{
+    public Publisher(String category, String url, String submission) {
 		this.category = category;
 		this.url = url;
 		this.submission = submission;
 		this.email = scrapeForEmail();
     }
-	public Publisher(String category, String url, String email, String submission){
+	public Publisher(String category, String submission, String email, String url){
 		this.category = category;
-		this.url = url;
+		if (url != null) {
+			try {
+				String urlFirstLetterCapitalized = url.substring(0, 1).toUpperCase();
+				String betterUrl = urlFirstLetterCapitalized + url.substring(1, url.indexOf("."));
+				if (betterUrl.equals("Gmail"))
+					this.url = "there";
+				else
+					this.url = betterUrl;
+			}catch(Exception e){
+				this.url = url;
+				System.out.println("Url fuckery failed");
+			}
+		}
+		else
+			this.url = url;
 		this.submission = submission;
 		this.email = email;
 	}
-    private String scrapeForEmail() throws Exception{
+    private String scrapeForEmail() {
         if (submission != null) {
             WebScraper webScraper = new WebScraper(submission);
             String emailFromScraper = webScraper.getEmail();

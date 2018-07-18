@@ -20,22 +20,23 @@ public class SpreadsheetReader{
      * @param directory: directory of spreadsheet database, white space separated values
      * @throws Exception
      */
-    public SpreadsheetReader(String directory, boolean emailsInc) throws Exception {
+	public SpreadsheetReader(String directory, boolean emailsInc) throws IOException {
         this.directory = directory;
-		spreadsheetReader(emailsInc);
+		controller(emailsInc);
     }
 	
 	/**
 	 * read spreadsheets
 	 * @throws Exception
 	 */
-	public void spreadsheetReader(boolean emailsIncluded) throws Exception {
+	private void controller(boolean emailsIncluded) throws IOException {
 		if(emailsIncluded){
+			// if emails are included (probably already scraped)
 			ArrayList<SpreadsheetRow> rows = csvToRows();
-			userChooseCategories();
-			rowsToPublishersWithScrape(rows);
+			rowsToPublishers(rows);
 		}
 		else {
+			// web scrapes for emails
 			ArrayList<SpreadsheetRow> lists = csvToRows();
 			userChooseCategories();
 			rowsToPublishersWithScrape(lists);
@@ -45,7 +46,7 @@ public class SpreadsheetReader{
 	/**
 	 * @RETURN arraylist of Index objects of what they want
 	 */
-	public void userChooseCategories() {
+	private void userChooseCategories() {
     	Scanner in = new Scanner(System.in);
     	System.out.println("\n=============================================");
         System.out.println(">> Select categories of interest or -1 for all:");
@@ -113,36 +114,62 @@ public class SpreadsheetReader{
 		indices.remove(0);
 		inFile.close();
 		System.out.println("Database file converted to lists!");
-		
 		return rows;
 	}
 	
 	/**
 	 * Uses indices ArrayList to only parse the chosen categories
 	 * finds email thru webscrape
+	 *
+	 * ALSO generates results used by AutoMail.java
+	 *
 	 * @param rows list of lists of the different data value types
-	 * @throws Exception
+	 * @throws IOException
 	 */
-    private void rowsToPublishersWithScrape(ArrayList<SpreadsheetRow> rows) throws Exception {
-        System.out.print("Converting lists to objects... ");
+    private void rowsToPublishersWithScrape(ArrayList<SpreadsheetRow> rows) throws IOException {
+        System.out.print("Converting rows to objects... ");
         // for the scraper
 		JavaScriptScraper.createAndStartService();
 		// for logging purposes
-		String currentDateAndTime = java.time.LocalDate.now().toString() + " " + LocalTime.now().toString();
-		PrintWriter outFile = new PrintWriter(new File("Results for " + currentDateAndTime + ".csv"));
+		PrintWriter outFile = new PrintWriter(new File("scrapedDatabase.csv"));
 		for (int n = 0; n < userCategories.size(); n++){
 			System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
-				// category, website domain, submission url
-				Publisher publisher = new Publisher(rows.get(i).getColumn(0), rows.get(i).getColumn(1), rows.get(i).getColumn(2));
+				Publisher publisher = new Publisher(
+						rows.get(i).getColumn(0), // category
+						rows.get(i).getColumn(1), // url
+						rows.get(i).getColumn(2));// submission
 				publishers.add(publisher);
-				// for logging
-				outFile.println(publisher.getCategory() + "," + publisher.getSubmission() + "," + publisher.getEmail() + "," + publisher.getUrl());
+				// resulting results log
+				outFile.println(
+						publisher.getCategory() + "," +
+						publisher.getSubmission() + "," +
+						publisher.getEmail() + "," +
+						publisher.getUrl()
+				);
 			}
 		}
 		outFile.close();
 		JavaScriptScraper.stopService();
-		System.out.println("Converted lists to objects!");
+		System.out.println("Converted rows to objects!");
+    }
+    /**
+	 * Uses indices ArrayList to only parse the chosen categories
+	 * reads file created by webscrape (so does NOT webscrape)
+	 * @param rows list of lists of the different data value types
+	 */
+    private void rowsToPublishers(ArrayList<SpreadsheetRow> rows) {
+        System.out.print("Converting rows to objects... ");
+        // for the scraper
+		for (int i = 0; i < rows.size(); i++){
+			Publisher publisher = new Publisher(
+					rows.get(i).getColumn(0), // category
+					rows.get(i).getColumn(1), // submission url
+					rows.get(i).getColumn(2), // email
+					rows.get(i).getColumn(3));// website domain
+			publishers.add(publisher);
+		}
+		System.out.println("Converted rows to objects!");
     }
 	
 	/**
@@ -189,6 +216,9 @@ public class SpreadsheetReader{
 			}
 			outFile.close();
 		} catch(Exception e) { }
+	}
+	public ArrayList<Publisher> getPublishers(){
+		return publishers;
 	}
 	/**
 	 * @return long string in table format

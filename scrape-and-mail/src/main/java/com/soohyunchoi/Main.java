@@ -1,6 +1,7 @@
 package com.soohyunchoi;
 
 import java.time.LocalTime;
+import java.util.Scanner;
 
 /**
  * July 2: all had ~22% efficiency
@@ -13,8 +14,7 @@ import java.time.LocalTime;
 public class Main {
     public static void main(String[] args) throws Exception {
 		LocalTime startTime = LocalTime.now();
-		SpreadsheetReader reader = new SpreadsheetReader("databasecommastest.csv", false);
-//		SpreadsheetReader reader = new SpreadsheetReader("jstest.csv", 1);
+		SpreadsheetReader reader = new SpreadsheetReader("database.csv", false);
 		printPublishers(reader);
 		reader.evaluatePerformance(startTime);
     }

@@ -1,3 +1,0 @@
-Sports,http://www.thesportsbank.net/advertise-with-us/,null,thesportsbank.net
-Sports,http://www.offthepost.info/write-for-us/,info@content.ad?subject=Contact%20from%20Widget%20344827&body=In%20order%20for%20us%20to%20better%20assist%20you%2C%20we%27ve%20added%20the%20following%20details%20to%20track%20where%20you%20saw%20our%20ads.%20Please%20do%20not%20remove%20or%20change%20this%20information.%0A%0APage%20URL:%20http%3A%2F%2Fwww.offthepost.info,offthepost.info
-Sports,http://www.sportsnetworker.com/write-for-us/submit-guest-post/,null,sportsnetworker.com
