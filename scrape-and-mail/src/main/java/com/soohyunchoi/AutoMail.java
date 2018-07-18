@@ -18,7 +18,7 @@ import javax.mail.internet.MimeMessage;
 public class AutoMail {
 	final private String from = "krussell@360payments.com";
 	final private String username = "krussell@360payments.com";// change accordingly
-	final private String password = "Kc@2017#!";               // change accordingly
+	final private String password = "******!";               // change accordingly
 	final private String host = "smtp.office365.com";
 	private ArrayList<String> sentContacts = new ArrayList();
 	private static Properties props = new Properties();
