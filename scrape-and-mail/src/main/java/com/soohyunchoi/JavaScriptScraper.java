@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -17,16 +19,28 @@ import java.util.concurrent.TimeUnit;
  */
 public class JavaScriptScraper extends TestCase {
 	public static ChromeDriverService service;
+	private static String OS = System.getProperty("os.name");
 	private WebDriver driver;
+	
 	public JavaScriptScraper() {
 		createDriver();
 	}
 	@BeforeClass
 	public static void createAndStartService() throws java.io.IOException {
-		service = new ChromeDriverService.Builder()
-				.usingDriverExecutable(new File("/Applications/WebDrivers/chromedriver/"))
-				.usingAnyFreePort()
-				.build();
+		// WINDOWS
+		if (OS.indexOf("win") >= 0) {
+			service = new ChromeDriverService.Builder()
+					.usingDriverExecutable(new File("chromedriver_win32"))
+					.usingAnyFreePort()
+					.build();
+		}
+		// MAC OS
+		else {
+			service = new ChromeDriverService.Builder()
+					.usingDriverExecutable(new File("chromedriver_mac64"))
+					.usingAnyFreePort()
+					.build();
+		}
 		service.start();
 	}
 	@AfterClass

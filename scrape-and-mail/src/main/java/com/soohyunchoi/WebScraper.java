@@ -6,7 +6,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.openqa.selenium.TimeoutException;
-
 import java.net.MalformedURLException;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
@@ -26,7 +25,7 @@ public class WebScraper {
     private boolean failedConnection;
 	private static String[] commonTLDs = {".com", ".org", ".uk", ".net"};
 	//Used if using different driver instances per webscraper
-	public WebScraper(String url) throws Exception{
+	public WebScraper(String url) {
         this.url = url;
         this.pageTextJSoup = scrape();
 		this.urlSuffix = parseSuffix();
@@ -99,7 +98,7 @@ public class WebScraper {
 	 * @return string[] of each word from scrape
 	 * @throws Exception
 	 */
-	private String[] scrape() throws Exception {
+	private String[] scrape() {
 		boolean internetWorks = false;
 		while(!internetWorks) {
 			try {
@@ -107,11 +106,15 @@ public class WebScraper {
 				internetWorks = true;
 			} catch (Exception e){
 				System.out.print("\u001b[31mInternet down, retrying in 3...");
-				Thread.sleep(2000);
-				System.out.print(" 2...");
-				Thread.sleep(2000);
-				System.out.print(" 1...\u001b[0m");
-				Thread.sleep(2000);
+				try {
+					Thread.sleep(2000);
+					System.out.print(" 2...");
+					Thread.sleep(2000);
+					System.out.print(" 1...\u001b[0m");
+					Thread.sleep(2000);
+				} catch (InterruptedException a){
+					System.out.println("2 1");
+				}
 			}
 		}
 		System.out.print("Attempting to scrape " + url + " ... ");
@@ -323,13 +326,16 @@ public class WebScraper {
 			//checking for asdfasf|foo@bar.com
 			if (front.contains("|"))
 				front = front.substring(front.indexOf("|")+1);
+			//checking for //foo@bar.com
+			if (front.indexOf("//") < 2)
+				front = front.substring(front.indexOf("//")+1);
 			//check if it starts with illegal characters
 			while (front.substring(0, 2).matches("\\D\\W")) {
 				front = front.substring(1);
 			}
 			String finalEmail = front+"@"+back;
 			//delete illegal characters
-			String[] illegalCharacters = {"%20", "//", "/", "\\", ")", "(", "{", "}", "[", "]", "<", ">", "\"", "'", "“"};
+			String[] illegalCharacters = {"%20", "//", "/", "\\", ")", "(", "{", "}", "[", "]", "<", ">", "\"", "'", "“", "-"};
 			for (String illegalChar : illegalCharacters){
 				while (finalEmail.contains(illegalChar)) {
 					finalEmail = finalEmail.replace(illegalChar, "");
