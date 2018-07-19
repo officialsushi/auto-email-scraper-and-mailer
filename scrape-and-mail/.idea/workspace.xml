@@ -2,373 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63bb14ec-a9da-44af-ae0d-477d8a26f211" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results for 2018-07-12 12:19:44.442525.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results for 2018-07-12 18:53:50.364051.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webscrape performance reports/2018-07-05 14:01:24.166119.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webscrape performance reports/2018-07-11 02:59:08.195311.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webscrape performance reports/2018-07-11 19:44:17.880413.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webscrape performance reports/2018-07-12 06:14:59.185065.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webscrape performance reports/2018-07-12 22:17:35.633323.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webscrape performance reports/2018-07-13 17:42:53.908604.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.csv" beforeDir="false" afterPath="$PROJECT_DIR$/database.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapedDatabase.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scrapedDatabase.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapedDatabaseBackup.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentEmails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sentEmails.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/%20ckucharski@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/DanWestern@wealthygorilla.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Erika@LivingWellMom.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Features@CrossFit.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Forbes@pubservice.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Galaxyradio@le.ac.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/HELP@gethealthyu.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Harsh@shoutmeloud.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/HollywoodHiccups@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Idahospromise@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Jamie.Turner@60SecondMarketer.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Julia@TheQuietGrove.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Kaufman--rachel@elevationdcmedia.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Kim@disneyfoodblog.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/LaTisha@YoungFinances.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Liz.Doughman@advantagemedia.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Meredith.Warren@activenetwork.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/NSW0411633674lucy@lifedesigncoach.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Samantha@NordicClinical.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Shauna@BreathingProsperity.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Submissions@BallersOnBudgets.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/Times@www.inspire.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/abiao@mathfinance.cn.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/abukuorode1@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/aditya.singh@aasaanjobs.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/admin@KidsFirstCommunity.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/admin@buffettpedia.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/admin@hivehealthmedia.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/admin@rednovalearning.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/admin@wphostingdiscount.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/ads@t-nation.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/advertising@amemediagroup.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/alison@gothicbeauty.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/allegra@allegralearning.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/artfandesign@gmail.info.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/articles@parhlo.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/articles@scotsmanguide.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/articles@soullifetimes.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/ashwin@installingmuscles.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/askus@smallbusinessbc.ca.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/authors@bepublishing.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/bea.riemschneider@advantagemedia.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/bizmastersglobal@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/bkcommunity@bkpub.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/blog@motionelements.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/bob@cpatalent.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/bobl@lakeshore.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/brett@brettanderson.net.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/bschool@Indiainfoline.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/caryn@broadwayworld.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/catherine@offbeatempire.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/cclark@gnif.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/chinelo.enwonwu@yahoo.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/chris@day2dayprinting.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/clark123@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/clientcare@intentionalwealthinstitute.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/cmorris@aao.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/comebackmomma@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/community@edustaff.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/connect@iamwire.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@cloudjolt.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@cmuse.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@collegefashion.net.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@daytranslations.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@designorate.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@estateandmanor.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@graphstock.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@hashmeta.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@izideo.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@mondevices.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@moneyzebra.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@onlyfacebook.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@philippineslifestyle.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@upcominghealth.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contact@zigverve.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contactus@pushliving.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/content@dermveda.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contribute@freelancetofreedomproject.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contribute@thealternative.in.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contributors@businessinsider.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contributors@inc.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/contributors@socialmediaweek.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/crystal@hellofamilymedia.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/customerservice@additudemag.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/customerservice@adoptivefamilies.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/dan@rightaboutmoney.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/daniel@healthcarebusinesstoday.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/david@survivingtheou.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/director@kreativemommy.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/drew@geekestatelabs.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/dvanzant@investorideas.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor.webposts@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@africacradle.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@alaskaparent.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@dogonews.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@freshcup.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@hypergridbusiness.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@inthenews.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@meetmindful.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@menuism.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@myfinances.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@ncwgoodlife.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@noomii.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@outdoorsnw.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@pacifictribune.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@pittsburghparent.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@readme.lk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@smallbizclub.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@smtmagazine.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@soloparentmag.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@thegaysay.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@todaysmama.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editor@usms.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editorddf@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editorial.team@malaysianstudent.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editorial@optoutrevolutionary.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editorial@wired.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editors@monitorbacklinks.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/editors@writing-world.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/elise@celebricious.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/elt.marketing.uk@oup.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/enquiries@eluceoeducation.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/enquiries@madbuzzhk.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/enquiry@perceptionsystem.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/enquiry@theexpat.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/entrepreneurshipsecrets@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/express@ascd.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/features@thegreenparent.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/feed@seedbed.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/gent.assistant@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/grace@rethinkingschools.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/guest@alleywatch.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/guestblog@clickindustries.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/gumtreeaumedia@gumtree.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello.usa@jkp.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@UrbanWired.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@asquaredcoach.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@culturefly.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@devrel.net.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@foodsense.is.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@imoney.sg.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@inspiredm.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@mttr.io.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@theshovel.au.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@wearecurrent.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/hello@xumagazine.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/helpme@makingbusinessmatter.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/henry@weekweekly.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/herculture@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/ian.alam@minddigital.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/idea@phoenixandphoenix.net.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/iml-editor@mountaineering.ie.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info.inc007@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info.worldinforms@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@247businessnews.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@Jcount.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@aagc.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@allbloggingtips.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@austinsocialplanner.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@autoinsuresavings.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@blink.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@bloggerspassion.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@bostonfoodtruckblog.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@brandignity.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@bubsociety.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@businessblogshub.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@businessfirstfamily.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@businesspartnermagazine.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@ccwdigital.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@charityjob.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@classycareergirl.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@corporate-eye.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@drivenautos.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@econitynepal.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@ednewsdaily.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@educationafter12th.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@entertainment-focus.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@expostmagazine.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@fearlessparent.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@financetrain.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@formulatedfitness.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@ghanacelebrities.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@handsomeandco.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@handspringpublishing.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@healthiack.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@healthkartclub.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@i2mag.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@indianlink.com.au.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@infed.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@journeywithmum.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@lifeafterstudyabroad.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@mearto.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@merriammusic.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@mountainpublishing.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@optiinfo.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@paradigmcg.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@pexnetwork.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@publiclawtoday.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@repeatlogo.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@retireby45.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@revenuerecognition.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@seleneriverpress.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@sellpension.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@shared-eq.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@simplek12.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@slayedmagazine.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@smallbusinessbonfire.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@tapmagonline.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@the-editor.net.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@thealternativedaily.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@theeducatorsroom.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@thesocialmediatoday.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@theurbantwist.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@traderplanet.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@ui-patterns.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@webalive.com.au.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@webdesignerpad.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/info@whatsgoodonline.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/instil@uwl.ac.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jackie@birdsontheblog.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jacob@mypersonalfinancejourney.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/james@astronaut.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/james@oilprice.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jason@betterparenting.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jeff@glutathionepro.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jerred@endofthreefitness.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jkirk@chocolateuniversityonline.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jobs4papon@Gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jobs@rantmn.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/joel.falconer@designfestival.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/john.gancarz@connect4education.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/john@smartmoneyjunction.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/johnchow@johnchow.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/julia.rampen@newstatesman.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/jwilliams@universalmagazines.com.au.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/kateri@paloalto.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/kristin@nerdprobs.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/kurt@dealermarketing.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/kylie@zenmindbodylife.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/laura.panjwani@advantagemedia.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/learning@luisacotto.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/lizzy@equestrianprofessional.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/lmorgan@itgovernance.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/local@inman.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/lukeg37@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/mail@becomingyourownbank.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/mail@cssauthor.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/malexandria@eclipsemagazine.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/marc@risingtide-media.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/marketing@consolidatedlabel.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/marketing@kerneltraining.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/marlene@adiligentheart.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/mburns@gill.ie.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/megan@sustainablefoodtrust.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/memberservices@everydayfamily.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/membership@homelesslink.org.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/michael.dunlap@fansided.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/michelle.taylor@advantagemedia.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/moa@sussex.ac.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/mohit@entrepreneurshiplife.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/more.edit@meredith.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/mostinspired@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/mstromberg@planning.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/naturallyparentingtwins@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/news@financialops.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/news@killerstartups.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/news@mashable.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/newwriters@screenjolt.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/nick@flesheatingzipper.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/nikki@greenmoxie.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/philadelphiacavemedia@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/pitches@hellogiggles.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/post@seven2success.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/press@dutchdailynews.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/producer@smallbusinessesdoitbetter.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/publications@culturalweekly.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/quarterly@thecrhs.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/rajiv@financemagazineonline.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/rcgitsolutions@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/recruiting@parentingsquad.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/recruiting@wisebread.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/reenamurphy58@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/reuben@audiomentor.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/risingafricablog@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/robin@motherhoodlater.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/roxanne@cincinnnatiparent.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/roxanne@indyschild.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/saga.briggs@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/sales@intuilab.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/sales@nirmal.com.au.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/sarah@nurselovesfarmer.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/sasha@voxnature.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/scoopify.owl@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/sharmapk752@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/signup@paleohacks.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/smt.support@industrydive.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/social@learn2earn.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/spotlight10@computer.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/statesmatt@bellyfatformula.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/stephenmaher67@yahoo.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/steven@tellybinge.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/stories@425business.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/submissions@NakedFoodMagazine.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/submissions@consciouslifestylemag.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/submissions@healthydebate.ca.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/submissions@hellobee.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/submissions@intpolicydigest.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/submissions@khabarfeed.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/submissions@medquarterly.co.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/submit@mindbodygreen.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/support@banks.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/support@iwt.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/support@lemonstand.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/support@themastercleanse.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/supportANZ@thomsonreuters.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/swebster@ideafit.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/tahirnajmi@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/talk@viralcreek.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/teresa@embracingthespectrum.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/theblushingmama@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/themanateemag@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/themoneybumper@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/thetvempress@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/thevyasinfotech@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/tips@curbly.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/tips@mediaite.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/tips@newenglandone.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/toeditor@healthable.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/tricksroad@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/upload.Guest_B.we0mgihzxq@u.box.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/vahe@marketingprofs.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/vincent@topvincent.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/webmaster@entrepreneur.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/webmaster@financialfreedomnow.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/webweaver@rapal.org.uk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/womenareboring@gmail.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/womentalk@dw.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/work@fashionista.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/write@faithandfinance.org.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/write@fruitfultravels.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/write@ummempowered.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/writefor@eatlivelife.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentMail/yours@BigHugeLabs.com.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/AutoMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/AutoMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/JavaScriptScraper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/JavaScriptScraper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/WebScraper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/WebScraper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_11_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_modules_org_apache_commons_lang3_6_5_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018-07-19 12:39:52.444636.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver_mac64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver_win32.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database backup.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrape-and-mail.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapedDatabase.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentEmails.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentMail/intern2@360payments.com.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentMail/soohyun9009@gmail.com.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentMail\info@autoinsuresavings.org.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentMail\kurt@dealermarketing.com.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Index.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetRow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/soohyunchoi/autoMail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/soohyunchoi/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Index.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/JavaScriptScraper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Publisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/SpreadsheetRow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/WebScraper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/soohyunchoi/autoMail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/soohyunchoi/AppTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -396,88 +104,7 @@
     <favorites_list name="scrape-and-mail" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JavaScriptScraper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="147" column="44" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoMail.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/AutoMail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="104" column="55" selection-start-line="104" selection-start-column="55" selection-end-line="104" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpreadsheetReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/SpreadsheetReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebScraper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/WebScraper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Publisher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/Publisher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -769,12 +396,12 @@
       <workItem from="1531412101187" duration="43105000" />
       <workItem from="1531981973387" duration="682000" />
       <workItem from="1532017215253" duration="10386000" />
-      <workItem from="1532027877253" duration="2832000" />
+      <workItem from="1532027877253" duration="3201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103301000" />
+    <option name="totallyTimeSpent" value="103670000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -798,18 +425,18 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32956383" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33931035" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33931035" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32827586" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4906054" visible="true" weight="0.2907916" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49103448" visible="true" weight="0.2907916" />
       <window_info anchor="right" id="Database" order="3" weight="0.32956383" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" sideWeight="0.5093946" side_tool="true" visible="true" weight="0.2907916" />
+      <window_info id="Favorites" order="2" sideWeight="0.5089655" side_tool="true" visible="true" weight="0.2907916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1134,7 +761,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/JavaScriptScraper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state>
           <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1173,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soohyunchoi/AutoMail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="104" column="55" selection-start-line="104" selection-start-column="55" selection-end-line="104" selection-end-column="55" />
+        <state relative-caret-position="164">
+          <caret line="99" column="16" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

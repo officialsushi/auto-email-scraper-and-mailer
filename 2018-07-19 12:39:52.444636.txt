@@ -1,0 +1,12 @@
+------------------------------------------------------------------------------
+     PERFORMANCE ANALYSIS2018-07-19 12:39:52.444636
+
+Start time: 12:39:43.241941			  End time: 12:39:52.436554
+# of publishers processed: 2		  # of emails found: 2
+# failed connections:   0 		      Out of:    2 (0.00%)
+
+% of total emails found: 100.00%
+% of emails from working connections found: 100.00%
+------------------------------------------------------------------------------
+Automotive,kurt@dealermarketing.com,http://www.dealermarketing.com/write-for-us/,dealermarketing.com
+Automotive,info@autoinsuresavings.org,http://www.autoinsuresavings.org/submit-guest-post/,autoinsuresavings.org
