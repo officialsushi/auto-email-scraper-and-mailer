@@ -26,7 +26,7 @@ public class Main {
 				"-------------------------------------------------------------------\n"
 		);
 		System.out.print(
-				"\nPlease select a number 1-4:\n" +
+				"\nPlease select a number 1-3:\n" +
 				"1. Scrape Emails\n" +
 				"2. Auto Mail\n" +
 				"3. Scrape Emails and then Auto Mail\n"
@@ -130,7 +130,6 @@ public class Main {
 					System.out.println("Is your email host smtp.office365.com? (Probably yes) (Y/N)");
 					AutoMail autoMail;
 					if (in.next().equalsIgnoreCase("Y")) {
-						
 						autoMail = new AutoMail("scrapedDatabase.csv", email, pw, "smtp.office365.com", "587");
 						userChoiceValid = true;
 					} else {

@@ -1,6 +1,9 @@
 package com.soohyunchoi;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * publisher object
@@ -56,7 +59,17 @@ public class Publisher {
             throw new IllegalArgumentException("Submission url is NULL");
     }
     private String scrapeForEmailNoSub() {
-		final String[] CONTACTPAGEENDS = {"/write-for-us/", "/contribute/", "/submit-guest-post/", "/guest-posts/", "/guest-post/", "/contact-us/"};
+    	String[] CONTACTPAGEENDS = {"/write-for-us/", "/contribute/", "/submit-guest-post/", "/guest-posts/", "/guest-post/", "/contact-us/"};
+		String contactPageEndsFromFile = "";
+    	try {
+			Scanner in = new Scanner(new File("contactPageEnds.txt"));
+			while(in.hasNext()) {
+				contactPageEndsFromFile += in.next();
+			}
+			CONTACTPAGEENDS = contactPageEndsFromFile.split(",");
+		}catch(IOException e){
+    		System.out.println("Could not read contactPageEnds file. Using default contact ends...");
+		}
 		String emailFromScraper = null;
 		int index = 0;
 		if (url != null) {

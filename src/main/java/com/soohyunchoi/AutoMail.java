@@ -27,9 +27,6 @@ public class AutoMail {
 	private static Properties props = new Properties();
 	public ArrayList<Publisher> publishers = new ArrayList();
 	
-	public AutoMail() {
-		setUpProperties();
-	}
 	public AutoMail(String databaseName, String email, String pw, String host, String port) {
 		this.databaseName = databaseName;
 		this.username = email;
@@ -78,7 +75,7 @@ public class AutoMail {
 	public void getContacts(String file) throws IOException {
 		// read spreadsheet
 		try {
-			SpreadsheetReader fileReader = new SpreadsheetReader(file, false,true);
+			SpreadsheetReader fileReader = new SpreadsheetReader(file, true,true);
 			publishers = fileReader.getPublishers();
 		} catch (IOException e){
 			System.out.println("ERROR: Can't read spreadsheet. You may have inputted the wrong file, or terminated the program before the email scraper could finish.");
@@ -146,7 +143,7 @@ public class AutoMail {
 		try {
 			Transport.send(message);
 			PrintWriter printerWriter = new PrintWriter(new FileWriter(new File("sentEmails.txt"), true));
-			printerWriter.println(recipientEmail);
+			printerWriter.println(recipientEmail+" ");
 			sentContacts.add(recipientEmail);
 			printerWriter.close();
 			try{
