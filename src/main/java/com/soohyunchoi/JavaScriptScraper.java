@@ -28,7 +28,7 @@ public class JavaScriptScraper extends TestCase {
 	@BeforeClass
 	public static void createAndStartService() throws java.io.IOException {
 		// WINDOWS
-		if (OS.indexOf("win") >= 0) {
+		if (OS.indexOf("Win") >= 0) {
 			service = new ChromeDriverService.Builder()
 					.usingDriverExecutable(new File("chromedriver_win32"))
 					.usingAnyFreePort()

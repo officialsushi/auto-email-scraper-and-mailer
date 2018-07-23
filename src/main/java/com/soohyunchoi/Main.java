@@ -179,6 +179,7 @@ public class Main {
 					userChoiceValid = true;
 				}
 			} catch (Exception e){
+				System.out.println(e);
 				System.out.println("Error! The file name is probably wrong or the file is in the wrong place.");
 				System.out.println("Continue? (Y/N)");
 				if (in.next().equalsIgnoreCase("N")) {
