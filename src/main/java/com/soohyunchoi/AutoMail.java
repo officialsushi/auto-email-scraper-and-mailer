@@ -17,6 +17,7 @@ import javax.mail.internet.MimeMessage;
 @SuppressWarnings("Duplicates")
 public class AutoMail {
 	private static String OS = System.getProperty("os.name");
+	private String port;
 	private String from;
 	private String username;
 	private String password;
@@ -29,12 +30,13 @@ public class AutoMail {
 	public AutoMail() {
 		setUpProperties();
 	}
-	public AutoMail(String databaseName, String email, String pw, String host) {
+	public AutoMail(String databaseName, String email, String pw, String host, String port) {
 		this.databaseName = databaseName;
 		this.username = email;
 		this.from = email;
 		this.password = pw;
 		this.host = host;
+		this.port = port;
 		setUpProperties();
 	}
 	/**
@@ -44,7 +46,8 @@ public class AutoMail {
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");
 		props.put("mail.smtp.host", host);
-		props.put("mail.smtp.port", "25");
+		props.put("mail.smtp.port", port);
+//		props.put("mail.smtp.port", "25");
 	}
 	/**
 	 * full sends only.
@@ -162,7 +165,7 @@ public class AutoMail {
 			}
 				System.out.println(" Success!\n");
 		} catch (Exception e) {
-			System.out.println(" Failed!\n");
+			System.out.println(" Failed! Exception: " + e + "\n");
 		}
 	}
 	public static void clearSentEmails(){

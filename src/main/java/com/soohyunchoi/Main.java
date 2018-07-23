@@ -1,8 +1,8 @@
 package com.soohyunchoi;
 
-import java.io.File;
-import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.time.LocalTime;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -95,15 +95,15 @@ public class Main {
 					System.out.println("Is your email host smtp.office365.com? (Probably yes) (Y/N)");
 					AutoMail autoMail;
 					if (in.next().equalsIgnoreCase("Y")) {
-						
-						autoMail = new AutoMail(directory, email, pw, "smtp.office365.com");
+						autoMail = new AutoMail(directory, email, pw, "smtp.office365.com", "587");
 						userChoiceValid = true;
 					}
 					else {
 						System.out.println("Enter the smtp url for your email host");
 						String smtp = in.next();
-						
-						autoMail = new AutoMail(directory, email, pw, smtp);
+						System.out.println("Enter the smtp port");
+						String port = in.next();
+						autoMail = new AutoMail(directory, email, pw, smtp, port);
 						userChoiceValid = true;
 					}
 					// sendit!!!
@@ -131,13 +131,14 @@ public class Main {
 					AutoMail autoMail;
 					if (in.next().equalsIgnoreCase("Y")) {
 						
-						autoMail = new AutoMail("scrapedDatabase.csv", email, pw, "smtp.office365.com");
+						autoMail = new AutoMail("scrapedDatabase.csv", email, pw, "smtp.office365.com", "587");
 						userChoiceValid = true;
 					} else {
 						System.out.println("Enter the smtp url for your email host");
 						String smtp = in.next();
-						
-						autoMail = new AutoMail("scrapedDatabase.csv", email, pw, smtp);
+						System.out.println("Enter the smtp port");
+						String port = in.next();
+						autoMail = new AutoMail("scrapedDatabase.csv", email, pw, smtp, port);
 						userChoiceValid = true;
 					}
 					// sendit!!!

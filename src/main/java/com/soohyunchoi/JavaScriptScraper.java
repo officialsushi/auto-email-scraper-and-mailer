@@ -64,7 +64,7 @@ public class JavaScriptScraper extends TestCase {
 	}
 	public String[] scrape() {
 		List<WebElement> elementsRaw = driver.findElements(By.tagName("div"));
-		ArrayList<String> elementsRawSplit = new ArrayList<>();
+		ArrayList<String> elementsRawSplit = new ArrayList();
 		for (WebElement a : elementsRaw){
 			String[] splitElements = a.getText().split("\\s+");
 			for(String b : splitElements){

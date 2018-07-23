@@ -1,4 +1,5 @@
-package com.soohyunchoi; /**
+package com.soohyunchoi;
+/**
  * @author: sush soohyun choi
  *
  */
@@ -6,6 +7,7 @@ package com.soohyunchoi; /**
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.*;
 
@@ -218,6 +220,7 @@ public class SpreadsheetReader{
 				}
 				outFile.close();
 			} catch (Exception e) {
+				System.out.println(e);
 			}
 		}
 	}

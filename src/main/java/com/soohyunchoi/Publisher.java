@@ -1,8 +1,5 @@
 package com.soohyunchoi;
 
-import javax.mail.internet.MimeMessage;
-import java.io.IOException;
-
 /**
  * publisher object
  *
