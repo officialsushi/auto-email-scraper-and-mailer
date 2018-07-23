@@ -30,7 +30,7 @@ public class JavaScriptScraper extends TestCase {
 		// WINDOWS
 		if (OS.indexOf("Win") >= 0) {
 			service = new ChromeDriverService.Builder()
-					.usingDriverExecutable(new File("chromedriver_win32"))
+					.usingDriverExecutable(new File("chromedriver_win32.exe"))
 					.usingAnyFreePort()
 					.build();
 		}
