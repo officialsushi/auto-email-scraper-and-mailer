@@ -1,5 +1,7 @@
 package com.soohyunchoi;
 
+import java.util.ArrayList;
+
 /**
  * publisher object
  *
@@ -8,14 +10,21 @@ package com.soohyunchoi;
  */
 
 public class Publisher {
-    private final String category, email, submission;
+    private final String category, email;
+    private String submission;
     private String url;
 	public boolean failedConnection;
+	
     public Publisher(String category, String url, String submission) {
 		this.category = category;
 		this.url = url;
 		this.submission = submission;
 		this.email = scrapeForEmail();
+    }
+    public Publisher(String category, String url) {
+		this.category = category;
+		this.url = url;
+		this.email = scrapeForEmailNoSub();
     }
 	public Publisher(String category, String submission, String email, String url){
 		this.category = category;
@@ -46,6 +55,24 @@ public class Publisher {
         } else
             throw new IllegalArgumentException("Submission url is NULL");
     }
+    private String scrapeForEmailNoSub() {
+		final String[] CONTACTPAGEENDS = {"/write-for-us/", "/contribute/", "/submit-guest-post/", "/guest-posts/", "/guest-post/", "/contact-us/"};
+		String emailFromScraper = null;
+		int index = 0;
+		if (url != null) {
+			String syntheticSubmission = null;
+			while (emailFromScraper == null && index < CONTACTPAGEENDS.length) {
+				syntheticSubmission = "http://www." + url+CONTACTPAGEENDS[index];
+				WebScraper webScraper = new WebScraper(syntheticSubmission);
+				emailFromScraper = webScraper.getEmail();
+				System.out.println(emailFromScraper);
+				this.failedConnection = webScraper.isFailedConnection();
+				index++;
+			}
+			this.submission = syntheticSubmission;
+		}
+		return emailFromScraper;
+	}
 	public String toString() {
 		return String.format("%23s  |%34s  |%40s  |%2s%-40s", this.category, this.url, this.email, "", this.submission);
 	}

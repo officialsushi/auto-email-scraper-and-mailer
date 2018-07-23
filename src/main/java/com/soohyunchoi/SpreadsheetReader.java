@@ -22,16 +22,16 @@ public class SpreadsheetReader{
      * @param directory: directory of spreadsheet database, white space separated values
      * @throws Exception
      */
-	public SpreadsheetReader(String directory, boolean emailsInc) throws IOException {
+	public SpreadsheetReader(String directory, boolean emailsInc, boolean contactInc) throws IOException {
         this.directory = directory;
-		controller(emailsInc);
+		controller(emailsInc, contactInc);
     }
 	
 	/**
 	 * read spreadsheets
 	 * @throws Exception
 	 */
-	private void controller(boolean emailsIncluded) throws IOException {
+	private void controller(boolean emailsIncluded, boolean contactInc) throws IOException {
 		if(emailsIncluded){
 			// if emails are included (probably already scraped)
 			ArrayList<SpreadsheetRow> rows = csvToRows();
@@ -39,9 +39,9 @@ public class SpreadsheetReader{
 		}
 		else {
 			// web scrapes for emails
-			ArrayList<SpreadsheetRow> lists = csvToRows();
+			ArrayList<SpreadsheetRow> rows = csvToRows();
 			userChooseCategories();
-			rowsToPublishersWithScrape(lists);
+			rowsToPublishersWithScrape(rows, contactInc);
 		}
 	}
 	
@@ -126,7 +126,7 @@ public class SpreadsheetReader{
 	 * @param rows list of lists of the different data value types
 	 * @throws IOException
 	 */
-    private void rowsToPublishersWithScrape(ArrayList<SpreadsheetRow> rows) throws IOException {
+    private void rowsToPublishersWithScrape(ArrayList<SpreadsheetRow> rows, boolean contactInc) throws IOException {
         System.out.print("Converting rows to objects... ");
         // for the scraper
 		JavaScriptScraper.createAndStartService();
@@ -135,10 +135,17 @@ public class SpreadsheetReader{
 		for (int n = 0; n < userCategories.size(); n++){
 			System.out.println("User's categories #" + n + 1 + " | Category: " + userCategories.get(n).getCategory() + " | Start/End: " + userCategories.get(n).getStart() + "/" + userCategories.get(n).getEnd() + "\n");
 			for (int i = userCategories.get(n).getStart(); i < userCategories.get(n).getEnd(); i++){
-				Publisher publisher = new Publisher(
-						rows.get(i).getColumn(0), // category
-						rows.get(i).getColumn(1), // url
-						rows.get(i).getColumn(2));// submission
+				Publisher publisher;
+				if (contactInc) {
+					publisher = new Publisher(
+							rows.get(i).getColumn(0), // category
+							rows.get(i).getColumn(1), // url
+							rows.get(i).getColumn(2));// submission
+				} else {
+					publisher = new Publisher(
+							rows.get(i).getColumn(0), // category
+							rows.get(i).getColumn(1));// url
+				}
 				publishers.add(publisher);
 				// resulting results log
 				outFile.println(

@@ -167,17 +167,12 @@ public class Main {
 			System.out.println("NOTE: All files should be in root directory!!");
 			try {
 				String directory = in.next();
-				if (!directory.endsWith(".csv")) {
-					System.out.println("Warning: file extension is not .csv! Continue? (Y/N)");
-					if (in.next().equalsIgnoreCase("Y")) {
-						reader = new SpreadsheetReader(directory, false);
-						userChoiceValid = true;
-					}
-				}
-				else {
-					reader = new SpreadsheetReader(directory, false);
+				System.out.println("Is the write for us contact page included? (Y/N)");
+				boolean contactInc = false;
+				if (in.next().equalsIgnoreCase("Y"))
+					contactInc = true;
+					reader = new SpreadsheetReader(directory, false, contactInc);
 					userChoiceValid = true;
-				}
 			} catch (Exception e){
 				System.out.println(e);
 				System.out.println("Error! The file name is probably wrong or the file is in the wrong place.");

@@ -78,7 +78,7 @@ public class AutoMail {
 	public void getContacts(String file) throws IOException {
 		// read spreadsheet
 		try {
-			SpreadsheetReader fileReader = new SpreadsheetReader(file, true);
+			SpreadsheetReader fileReader = new SpreadsheetReader(file, false,true);
 			publishers = fileReader.getPublishers();
 		} catch (IOException e){
 			System.out.println("ERROR: Can't read spreadsheet. You may have inputted the wrong file, or terminated the program before the email scraper could finish.");
