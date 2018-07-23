@@ -28,8 +28,7 @@ public class Main {
 		System.out.print(
 				"\nPlease select a number 1-3:\n" +
 				"1. Scrape Emails\n" +
-				"2. Auto Mail\n" +
-				"3. Scrape Emails and then Auto Mail\n"
+				"2. Auto Mail\n"
 		);
 		boolean userChoiceValid = false;
 		int userChoice = 0;
